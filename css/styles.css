@@ -117,3 +117,113 @@ h1 span,h2 span{color:var(--purple)}
   .solution-grid{grid-template-columns:1fr 1fr}
   .industry-grid{grid-template-columns:1fr}
 }
+/* Maddox — Section 02 final composition */
+.challenge-inner {
+  padding-top: 42px;
+  padding-bottom: 48px;
+  justify-content: center;
+}
+
+.challenge-header {
+  margin-bottom: 18px;
+}
+
+.challenge-grid {
+  gap: 48px;
+}
+
+.challenge-headline {
+  padding-right: 54px;
+}
+
+.challenge-headline h2 {
+  font-size: clamp(43px, 4.25vw, 60px);
+  line-height: .96;
+}
+
+.challenge-copy p {
+  font-size: 14px;
+  line-height: 1.55;
+  margin-bottom: 18px;
+}
+
+.challenge-pillars {
+  margin-top: 28px;
+}
+
+.challenge-pillar {
+  min-height: 128px;
+  padding: 18px 20px 14px 0;
+  margin-right: 20px;
+  gap: 14px;
+}
+
+.pillar-icon {
+  flex-basis: 46px;
+  width: 46px;
+  height: 46px;
+  font-size: 22px;
+}
+
+.challenge-pillar h3 {
+  margin: 3px 0 9px;
+  font-size: 12px;
+}
+
+.challenge-pillar p {
+  font-size: 10.5px;
+  line-height: 1.45;
+}
+
+.challenge-close {
+  margin-top: 16px;
+}
+
+.challenge-close p {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.challenge-wave {
+  bottom: 48px;
+  height: 135px;
+  opacity: .30;
+}
+
+/* Pantallas con poca altura */
+@media (max-height: 780px) and (min-width: 901px) {
+  .challenge-inner {
+    padding-top: 28px;
+    padding-bottom: 36px;
+  }
+
+  .challenge-header {
+    margin-bottom: 12px;
+  }
+
+  .challenge-headline h2 {
+    font-size: clamp(39px, 3.9vw, 54px);
+  }
+
+  .challenge-copy p {
+    margin-bottom: 13px;
+  }
+
+  .challenge-pillars {
+    margin-top: 20px;
+  }
+
+  .challenge-pillar {
+    min-height: 112px;
+    padding-top: 14px;
+  }
+
+  .challenge-close {
+    margin-top: 10px;
+  }
+
+  .challenge-wave {
+    bottom: 38px;
+    height: 110px;
+  }
+}
