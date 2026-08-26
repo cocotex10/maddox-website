@@ -48,3 +48,18 @@ document.addEventListener('keydown',e=>{
 });
 
 update();
+
+
+// Show navigation controls while the pointer is moving, then fade them back out.
+const viewport = document.querySelector('.viewport');
+let controlsTimer;
+function revealControls() {
+  if (!viewport) return;
+  viewport.classList.add('controls-visible');
+  clearTimeout(controlsTimer);
+  controlsTimer = setTimeout(() => {
+    viewport.classList.remove('controls-visible');
+  }, 1600);
+}
+viewport?.addEventListener('mousemove', revealControls, {passive:true});
+viewport?.addEventListener('touchstart', revealControls, {passive:true});
