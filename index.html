@@ -8,9 +8,19 @@
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+
+<!-- Maddox session intro: shown once per browser session -->
+<div id="maddox-intro" aria-hidden="true">
+  <div class="maddox-intro-glow"></div>
+  <div class="maddox-intro-mark">
+    <span class="maddox-intro-word">MADDOX</span><span class="maddox-intro-dot"></span>
+    <div class="maddox-intro-sweep"></div>
+  </div>
+</div>
+
 <div class="shell">
 <aside class="rail">
-  <img class="logo" src="assets/logo/maddox-logo-white.png" alt="Maddox">
+  <picture class="logo-wrap"><img class="logo logo-dark-bg" src="assets/logo/maddox-logo-white.png" alt="Maddox"><img class="logo logo-light-bg" src="assets/logo/maddox-logo-dark.png" alt="Maddox"></picture>
   <nav class="rail-nav" id="railNav">
     <a class="rail-item active" href="#p1"><span class="rail-num">01</span><span class="rail-label">Inicio</span></a>
     <a class="rail-item" href="#p2"><span class="rail-num">02</span><span class="rail-label">El desafío</span></a>
@@ -27,7 +37,10 @@
   </div>
 </aside>
 
-<main class="viewport">
+<main class="viewport"><div class="mobile-logo"><img src="assets/logo/maddox-logo-dark.png" alt="Maddox"></div>
+  <div class="mobile-brand" aria-label="Maddox">
+    <img src="assets/logo/maddox-logo-white.png" alt="Maddox">
+  </div>
   <div class="track" id="track">
 
     <section class="panel" id="p1">
@@ -336,5 +349,31 @@
 </div>
 
 <script src="js/main.js"></script>
+
+<script>
+/* Maddox intro — once per browser session */
+(function () {
+  var intro = document.getElementById('maddox-intro');
+  if (!intro) return;
+
+  try {
+    if (sessionStorage.getItem('maddoxIntroShown') === '1') {
+      intro.remove();
+      return;
+    }
+    sessionStorage.setItem('maddoxIntroShown', '1');
+  } catch (e) {
+    /* If storage is unavailable, still allow the intro to complete normally. */
+  }
+
+  intro.setAttribute('aria-hidden', 'false');
+  intro.classList.add('maddox-intro-exit');
+
+  window.setTimeout(function () {
+    if (intro && intro.parentNode) intro.remove();
+  }, 3000);
+})();
+</script>
+
 </body>
 </html>
