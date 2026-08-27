@@ -20,7 +20,7 @@
 
 <div class="shell">
 <aside class="rail">
-  <picture class="logo-wrap"><img class="logo logo-dark-bg" src="assets/logo/maddox-logo-white.png" alt="Maddox"><img class="logo logo-light-bg" src="assets/logo/maddox-logo-dark.png" alt="Maddox"></picture>
+  <img class="logo" src="assets/logo/maddox-logo-white.png" alt="Maddox">
   <nav class="rail-nav" id="railNav">
     <a class="rail-item active" href="#p1"><span class="rail-num">01</span><span class="rail-label">Inicio</span></a>
     <a class="rail-item" href="#p2"><span class="rail-num">02</span><span class="rail-label">El desafío</span></a>
@@ -37,7 +37,7 @@
   </div>
 </aside>
 
-<main class="viewport"><div class="mobile-logo"><img src="assets/logo/maddox-logo-dark.png" alt="Maddox"></div>
+<main class="viewport"><div class="mobile-logo" aria-hidden="true"><img id="mobileLogo" src="assets/logo/maddox-logo-dark.png" alt="Maddox"></div>
   <div class="mobile-brand" aria-label="Maddox">
     <img src="assets/logo/maddox-logo-white.png" alt="Maddox">
   </div>
@@ -372,6 +372,48 @@
   window.setTimeout(function () {
     if (intro && intro.parentNode) intro.remove();
   }, 3000);
+})();
+</script>
+
+
+<script>
+(function () {
+  var mobileLogo = document.getElementById('mobileLogo');
+  if (!mobileLogo) return;
+
+  var whiteLogo = 'assets/logo/maddox-logo-white.png';
+  var darkLogo = 'assets/logo/maddox-logo-dark.png';
+
+  function updateMobileLogo() {
+    var panels = document.querySelectorAll('.panel');
+    var best = null;
+    var bestDistance = Infinity;
+    var center = window.innerWidth / 2;
+
+    panels.forEach(function (panel) {
+      var r = panel.getBoundingClientRect();
+      var distance = Math.abs((r.left + r.right) / 2 - center);
+      if (distance < bestDistance) {
+        bestDistance = distance;
+        best = panel;
+      }
+    });
+
+    if (best && (best.classList.contains('dark') || best.id === 'p8')) {
+      mobileLogo.src = whiteLogo;
+    } else {
+      mobileLogo.src = darkLogo;
+    }
+  }
+
+  window.addEventListener('resize', updateMobileLogo, { passive: true });
+
+  var track = document.getElementById('track');
+  if (track) {
+    track.addEventListener('scroll', updateMobileLogo, { passive: true });
+  }
+
+  setTimeout(updateMobileLogo, 50);
 })();
 </script>
 

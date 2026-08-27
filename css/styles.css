@@ -1944,112 +1944,6 @@ h6,
 
 
 /* =========================================================
-   MADDOX LOGO STANDARD
-   User-provided assets are never altered.
-   Dark background -> white logo
-   Light background -> original dark logo
-   ========================================================= */
-.logo-wrap {
-  display: block;
-  width: 132px;
-  height: auto;
-}
-.logo-wrap .logo {
-  width: 132px;
-  height: auto;
-  margin: 0;
-  display: block;
-}
-.logo-light-bg { display: none !important; }
-
-/* Default rail is dark, therefore white logo. */
-.rail .logo-dark-bg { display: block !important; }
-
-/* Light-content sections use the original dark logo when the rail is
-   visually paired with a light header context. */
-.mobile-logo {
-  display: none;
-  position: fixed;
-  top: 16px;
-  left: 20px;
-  z-index: 30;
-  width: 112px;
-}
-.mobile-logo img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-/* Mobile: rail disappears, so the light-background logo is explicitly
-   visible against the light content. */
-@media (max-width: 600px) {
-  .mobile-logo { display: block; }
-  .logo-wrap { width: 68px; }
-  .logo-wrap .logo { width: 68px; }
-}
-
-/* Light logo for light-background mobile header. */
-@media (max-width: 600px) {
-  .mobile-logo img { content: url("assets/logo/maddox-logo-dark.png"); }
-}
-
-/* Keep every panel usable when viewport height is reduced. */
-@media (max-width: 1100px) {
-  .track {
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-  }
-  .panel {
-    overflow-y: auto;
-    overflow-x: hidden;
-    -webkit-overflow-scrolling: touch;
-    height: 100%;
-    min-height: 100%;
-  }
-}
-
-/* Android/mobile touch scrolling: prevent nested fixed-height content from
-   trapping the gesture. */
-@media (max-width: 700px) {
-  html, body {
-    overflow: hidden;
-    height: 100%;
-  }
-  .viewport {
-    height: 100dvh;
-    min-height: 100dvh;
-    overflow: hidden;
-  }
-  .track {
-    height: 100dvh;
-    min-height: 100dvh;
-    overflow-x: auto;
-    overflow-y: hidden;
-    touch-action: pan-x;
-  }
-  .panel {
-    height: auto;
-    min-height: 100dvh;
-    max-height: none;
-    overflow-y: auto;
-    overflow-x: hidden;
-    -webkit-overflow-scrolling: touch;
-    touch-action: pan-y;
-    padding-bottom: 56px;
-  }
-  .solutions-panel .solutions-inner,
-  .challenge-panel .challenge-inner,
-  .process-panel .process-inner,
-  .talent-panel .talent-inner {
-    height: auto;
-    min-height: 100%;
-  }
-}
-
-
-/* =========================================================
    MADDOX SESSION INTRO
    Based on user-provided maddox-intro.html.
    Responsive and independent from the site sections.
@@ -2401,4 +2295,63 @@ button, input, textarea, select {
 #maddox-intro.maddox-intro-exit {
   animation-delay: 2.40s !important;
   animation-duration: .60s !important;
+}
+
+
+/* =========================================================
+   MADDOX — LOGO STANDARD
+   Dark background: supplied white logo.
+   Light background: supplied dark logo.
+   Never modify either asset.
+   ========================================================= */
+.rail .logo {
+  display:block;
+  width:132px;
+  height:auto;
+  margin:0 0 55px 0;
+  object-fit:contain;
+  object-position:left center;
+  flex:0 0 auto;
+}
+
+/* Mobile logo is intentionally independent from the rail. */
+.mobile-logo {
+  display:none;
+  position:fixed;
+  top:16px;
+  left:20px;
+  width:112px;
+  height:auto;
+  z-index:9998;
+  pointer-events:none;
+}
+.mobile-logo img {
+  display:block;
+  width:100%;
+  height:auto;
+  max-width:112px;
+  object-fit:contain;
+}
+
+@media (max-width:900px) {
+  .rail .logo {
+    width:68px;
+    margin-bottom:30px;
+  }
+}
+
+@media (max-width:600px) {
+  .mobile-logo { display:block; }
+  .rail .logo { display:none; }
+  .mobile-logo img {
+    width:112px;
+    max-width:112px;
+    height:auto;
+  }
+}
+
+/* Hard bounds prevent any global image rule from enlarging the logo. */
+.rail > .logo,
+.mobile-logo > img {
+  max-height:80px;
 }
