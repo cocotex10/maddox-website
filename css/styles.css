@@ -2707,3 +2707,51 @@ button, input, textarea, select {
     padding-right: 14px !important;
   }
 }
+
+/* =========================================================
+   V3.4 — DEFINITIVE iOS / ANDROID MOBILE LOGO FIX
+   Exactly one logo is rendered below 600px.
+   ========================================================= */
+@media screen and (max-width: 600px) {
+  .rail,
+  .rail .logo,
+  .rail .logo-wrap,
+  .rail picture,
+  .mobile-brand {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    max-width: 0 !important;
+    max-height: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    pointer-events: none !important;
+  }
+
+  .mobile-logo {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: fixed !important;
+    top: max(12px, env(safe-area-inset-top)) !important;
+    left: 18px !important;
+    width: 104px !important;
+    height: 34px !important;
+    max-width: 104px !important;
+    z-index: 10000 !important;
+    pointer-events: none !important;
+  }
+
+  .mobile-logo img {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 104px !important;
+    max-width: 104px !important;
+    height: auto !important;
+    max-height: 34px !important;
+    object-fit: contain !important;
+  }
+}
