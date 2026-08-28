@@ -376,44 +376,43 @@
 </script>
 
 
+
+
+
 <script>
 (function () {
-  var mobileLogo = document.getElementById('mobileLogo');
-  if (!mobileLogo) return;
+  var logo = document.getElementById('mobileLogo');
+  var track = document.getElementById('track');
+  if (!logo || !track) return;
 
   var whiteLogo = 'assets/logo/maddox-logo-white.png';
   var darkLogo = 'assets/logo/maddox-logo-dark.png';
 
-  function updateMobileLogo() {
+  function updateLogo() {
     var panels = document.querySelectorAll('.panel');
-    var best = null;
-    var bestDistance = Infinity;
     var center = window.innerWidth / 2;
+    var current = null;
+    var distance = Infinity;
 
     panels.forEach(function (panel) {
       var r = panel.getBoundingClientRect();
-      var distance = Math.abs((r.left + r.right) / 2 - center);
-      if (distance < bestDistance) {
-        bestDistance = distance;
-        best = panel;
+      var d = Math.abs(((r.left + r.right) / 2) - center);
+      if (d < distance) {
+        distance = d;
+        current = panel;
       }
     });
 
-    if (best && (best.classList.contains('dark') || best.id === 'p8')) {
-      mobileLogo.src = whiteLogo;
+    if (current && current.classList.contains('dark')) {
+      logo.src = whiteLogo;
     } else {
-      mobileLogo.src = darkLogo;
+      logo.src = darkLogo;
     }
   }
 
-  window.addEventListener('resize', updateMobileLogo, { passive: true });
-
-  var track = document.getElementById('track');
-  if (track) {
-    track.addEventListener('scroll', updateMobileLogo, { passive: true });
-  }
-
-  setTimeout(updateMobileLogo, 50);
+  track.addEventListener('scroll', updateLogo, {passive:true});
+  window.addEventListener('resize', updateLogo, {passive:true});
+  updateLogo();
 })();
 </script>
 

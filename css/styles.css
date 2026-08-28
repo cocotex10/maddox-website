@@ -2355,3 +2355,138 @@ button, input, textarea, select {
 .mobile-logo > img {
   max-height:80px;
 }
+
+/* Maddox intro — letter spacing matched to supplied logo */
+#maddox-intro .maddox-intro-mark,
+#maddox-intro .maddox-intro-word {
+  letter-spacing: 0.06em !important;
+}
+@media (max-width: 600px) {
+  #maddox-intro .maddox-intro-mark,
+  #maddox-intro .maddox-intro-word {
+    letter-spacing: 0.04em !important;
+  }
+}
+
+/* Consolidated fix — Section 02 mobile spacing */
+@media (max-width: 600px) {
+  .challenge-panel {
+    padding-top: 0 !important;
+  }
+  .challenge-panel .challenge-inner {
+    padding-top: 32px !important;
+    padding-bottom: 76px !important;
+  }
+  .challenge-panel .challenge-header {
+    margin-top: 0 !important;
+  }
+}
+
+/* Consolidated icon system — Sections 03 & 04 */
+.solution-icon,
+.node-icon,
+.pillar-icon,
+.step-icon,
+.process-label span {
+  color: var(--purple2) !important;
+}
+.solution-icon,
+.node-icon,
+.pillar-icon,
+.step-icon {
+  border-color: rgba(124,58,237,.30) !important;
+}
+.step-icon,
+.node-icon {
+  background: #fff !important;
+}
+
+/* Consolidated responsive baseline */
+@media (max-width: 900px) {
+  .panel {
+    height: auto !important;
+    min-height: 100dvh !important;
+    max-height: none !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+@media (max-width: 600px) {
+  .viewport,
+  .track {
+    height: 100dvh !important;
+    min-height: 100dvh !important;
+  }
+  .track {
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x;
+  }
+  .panel {
+    min-height: 100dvh !important;
+    height: auto !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    touch-action: pan-y;
+    padding-bottom: 64px;
+  }
+}
+
+/* FINAL SITE TYPOGRAPHY — do not override per section */
+h1, h2, h3, h4, h5, h6,
+h1 *, h2 *, h3 *, h4 *, h5 *, h6 *,
+.hero h1, .hero h1 *,
+.challenge-headline h2, .challenge-headline h2 *,
+.section-title, .section-title *,
+.solutions-title, .solutions-title *,
+.process-title, .process-title *,
+.talent-title, .talent-title *,
+.contact h2, .contact h2 * {
+  font-family: Georgia, "Times New Roman", serif !important;
+}
+p, p *,
+.kicker, .kicker *, .lead, .lead *,
+.challenge-label, .challenge-label *,
+.challenge-copy, .challenge-copy *,
+.challenge-pillar, .challenge-pillar *,
+.challenge-close, .challenge-close *,
+.solutions-label, .solutions-label *,
+.solutions-lead, .solutions-lead *,
+.solution-node, .solution-node *,
+.solutions-impact, .solutions-impact *,
+.process-label, .process-label *, .process-lead, .process-lead *,
+.process-step, .process-step *, .process-close, .process-close *,
+.talent-label, .talent-label *, .talent-lead, .talent-lead *,
+.talent-service, .talent-service *, .talent-close, .talent-close *,
+.rail, .rail *, .topbar, .topbar *, .progress, .progress *,
+button, input, textarea, select {
+  font-family: "Century Gothic", "Avenir Next", Avenir, Arial, sans-serif !important;
+}
+
+/* FINAL INTRO — exactly 3 seconds */
+#maddox-intro .maddox-intro-glow { animation-duration: 2.8s !important; }
+#maddox-intro .maddox-intro-mark {
+  animation:
+    maddoxIntroIn .85s cubic-bezier(.16,.8,.24,1) .10s forwards,
+    maddoxIntroOut .45s ease-in 2.35s forwards !important;
+}
+#maddox-intro .maddox-intro-word {
+  animation-duration: 1.05s !important;
+  animation-delay: .10s !important;
+  letter-spacing: .06em !important;
+}
+#maddox-intro .maddox-intro-mark {
+  letter-spacing: .06em !important;
+}
+#maddox-intro.maddox-intro-exit {
+  animation-delay: 2.40s !important;
+  animation-duration: .60s !important;
+}
+@media (max-width:600px) {
+  #maddox-intro .maddox-intro-mark,
+  #maddox-intro .maddox-intro-word {
+    letter-spacing: .04em !important;
+  }
+}
