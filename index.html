@@ -379,26 +379,34 @@
 
 
 
+
+
+
 <script>
 (function () {
   var logo = document.getElementById('mobileLogo');
   var track = document.getElementById('track');
-  if (!logo || !track) return;
+  if (!logo) return;
 
   var whiteLogo = 'assets/logo/maddox-logo-white.png';
   var darkLogo = 'assets/logo/maddox-logo-dark.png';
 
-  function updateLogo() {
-    var panels = document.querySelectorAll('.panel');
-    var center = window.innerWidth / 2;
+  function setLogoForCurrentPanel() {
+    if (!track) {
+      logo.src = darkLogo;
+      return;
+    }
+
+    var panels = track.querySelectorAll('.panel');
+    var viewportCenter = window.innerWidth / 2;
     var current = null;
-    var distance = Infinity;
+    var smallest = Infinity;
 
     panels.forEach(function (panel) {
       var r = panel.getBoundingClientRect();
-      var d = Math.abs(((r.left + r.right) / 2) - center);
-      if (d < distance) {
-        distance = d;
+      var distance = Math.abs(((r.left + r.right) / 2) - viewportCenter);
+      if (distance < smallest) {
+        smallest = distance;
         current = panel;
       }
     });
@@ -410,9 +418,9 @@
     }
   }
 
-  track.addEventListener('scroll', updateLogo, {passive:true});
-  window.addEventListener('resize', updateLogo, {passive:true});
-  updateLogo();
+  setLogoForCurrentPanel();
+  if (track) track.addEventListener('scroll', setLogoForCurrentPanel, {passive:true});
+  window.addEventListener('resize', setLogoForCurrentPanel, {passive:true});
 })();
 </script>
 

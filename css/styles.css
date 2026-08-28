@@ -2659,3 +2659,51 @@ button, input, textarea, select {
   font-family: "Century Gothic","Avenir Next",Avenir,Arial,sans-serif !important;
   font-weight: 400 !important;
 }
+
+/* =========================================================
+   V3.3 — FINAL MOBILE LOGO RULE
+   One logo only. Contrast follows background.
+   ========================================================= */
+@media (max-width: 600px) {
+  /* The desktop rail must never participate in mobile rendering. */
+  .rail,
+  .rail .logo,
+  .rail .logo-wrap,
+  .rail picture {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    max-width: 0 !important;
+    max-height: 0 !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+  }
+
+  .mobile-logo {
+    display: block !important;
+    position: fixed !important;
+    top: max(12px, env(safe-area-inset-top)) !important;
+    left: 18px !important;
+    width: 104px !important;
+    height: 34px !important;
+    z-index: 10000 !important;
+    pointer-events: none !important;
+  }
+
+  .mobile-logo img {
+    display: block !important;
+    width: 104px !important;
+    height: auto !important;
+    max-width: 104px !important;
+    max-height: 34px !important;
+    object-fit: contain !important;
+  }
+
+  /* Keep the menu/CTA area separate from the logo. */
+  .topbar {
+    padding-left: 138px !important;
+    padding-right: 14px !important;
+  }
+}
