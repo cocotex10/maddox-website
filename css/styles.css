@@ -2490,3 +2490,172 @@ button, input, textarea, select {
     letter-spacing: .04em !important;
   }
 }
+
+/* =========================================================
+   V3.1 — MOBILE HEADER / LOGO
+   Exactly one logo is visible on mobile.
+   The logo has its own header zone and never overlaps CTA.
+   ========================================================= */
+@media (max-width:600px) {
+  .rail {
+    display:none !important;
+    visibility:hidden !important;
+    width:0 !important;
+    flex:0 0 0 !important;
+    overflow:hidden !important;
+  }
+
+  .mobile-logo {
+    display:block !important;
+    position:fixed !important;
+    top:14px !important;
+    left:18px !important;
+    width:96px !important;
+    height:32px !important;
+    z-index:9998 !important;
+    pointer-events:none !important;
+  }
+
+  .mobile-logo img {
+    display:block !important;
+    width:96px !important;
+    max-width:96px !important;
+    max-height:32px !important;
+    height:auto !important;
+    object-fit:contain !important;
+  }
+
+  .topbar {
+    top:0 !important;
+    height:62px !important;
+    padding:0 16px 0 130px !important;
+    z-index:9997 !important;
+  }
+
+  .topbar .cta {
+    position:relative !important;
+    z-index:9999 !important;
+    white-space:nowrap !important;
+  }
+
+  .hero-copy {
+    padding-top:88px !important;
+  }
+}
+
+/* =========================================================
+   V3.1 — UNIFIED ICON SYSTEM
+   Sections 03 & 04: one consistent outline treatment,
+   one Maddox violet, no mixed icon styles.
+   ========================================================= */
+.solution-icon,
+.node-icon,
+.pillar-icon,
+.step-icon,
+.process-step .step-icon,
+.solution .solution-icon {
+  color:var(--purple2) !important;
+  border:1px solid rgba(124,58,237,.42) !important;
+  background:transparent !important;
+  width:42px !important;
+  height:42px !important;
+  min-width:42px !important;
+  min-height:42px !important;
+  border-radius:50% !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  line-height:1 !important;
+  font-size:18px !important;
+  box-shadow:none !important;
+  filter:none !important;
+}
+
+/* Prevent section-specific icon fills/backgrounds from reappearing. */
+.solution-icon *,
+.node-icon *,
+.pillar-icon *,
+.step-icon * {
+  color:var(--purple2) !important;
+  background:transparent !important;
+  border-color:transparent !important;
+}
+
+/* Keep the icon row clean on mobile. */
+@media (max-width:600px) {
+  .solution-icon,
+  .node-icon,
+  .pillar-icon,
+  .step-icon {
+    width:38px !important;
+    height:38px !important;
+    min-width:38px !important;
+    min-height:38px !important;
+    font-size:16px !important;
+  }
+}
+
+/* =========================================================
+   V3.2 — SECTION 04 ONLY
+   ========================================================= */
+
+/* Keep the section fully readable when desktop height is reduced. */
+@media (max-height: 820px) and (min-width: 901px) {
+  .process-panel .process-inner {
+    align-content: start !important;
+    padding-top: 28px !important;
+    padding-bottom: 70px !important;
+    gap: 16px !important;
+  }
+
+  .process-panel .process-top {
+    gap: 24px !important;
+  }
+
+  .process-panel .process-title {
+    font-size: clamp(38px, 4.1vw, 54px) !important;
+  }
+
+  .process-panel .process-image {
+    height: 190px !important;
+  }
+
+  .process-panel .process-step {
+    min-height: 112px !important;
+    padding-top: 34px !important;
+    padding-bottom: 12px !important;
+  }
+
+  .process-panel .process-close {
+    padding-top: 8px !important;
+  }
+}
+
+/* The process connector must sit behind the cards and never cross icons. */
+.process-panel .process-line {
+  top: 0 !important;
+  left: 10% !important;
+  right: 10% !important;
+  height: 1px !important;
+  z-index: 0 !important;
+  opacity: .55 !important;
+}
+
+.process-panel .process-step {
+  z-index: 2 !important;
+}
+
+/* One consistent icon language: violet outline circle + violet mark. */
+.process-panel .step-icon {
+  background: #fff !important;
+  border: 1px solid rgba(124,58,237,.42) !important;
+  color: var(--purple2) !important;
+  box-shadow: none !important;
+}
+
+.process-panel .step-icon,
+.process-panel .step-icon * {
+  color: var(--purple2) !important;
+  font-family: "Century Gothic","Avenir Next",Avenir,Arial,sans-serif !important;
+  font-weight: 400 !important;
+}
