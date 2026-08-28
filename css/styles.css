@@ -3578,3 +3578,37 @@ button, input, textarea, select {
   .section06-card p{margin-bottom:5px;}
   .section06-footer{font-size:13px;}
 }
+
+/* =========================================================
+   V4.0 — GLOBAL SVG ICON SYSTEM
+   All site icons use one consistent SVG visual language.
+   ========================================================= */
+.pillar-icon svg,
+.node-icon svg,
+.step-icon svg,
+.section06-card-icon svg {
+  display:block;
+  width:20px;
+  height:20px;
+  fill:none !important;
+  stroke:var(--purple2) !important;
+  stroke-width:1.7;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  vector-effect:non-scaling-stroke;
+}
+.pillar-icon,
+.node-icon,
+.step-icon,
+.section06-card-icon {
+  color:var(--purple2) !important;
+}
+@media (max-width:600px) {
+  .pillar-icon svg,
+  .node-icon svg,
+  .step-icon svg,
+  .section06-card-icon svg {
+    width:19px;
+    height:19px;
+  }
+}
