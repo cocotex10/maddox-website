@@ -2430,7 +2430,7 @@ button, input, textarea, select {
     overflow-y: auto !important;
     overflow-x: hidden !important;
     touch-action: pan-y;
-    padding-bottom: 64px;
+    padding-bottom: 22px;
   }
 }
 
@@ -3586,7 +3586,10 @@ button, input, textarea, select {
 .pillar-icon svg,
 .node-icon svg,
 .step-icon svg,
-.section06-card-icon svg {
+.section06-card-icon svg,
+.impact-mark svg,
+.process-close-mark svg,
+.section06-callout-icon svg {
   display:block;
   width:20px;
   height:20px;
@@ -3600,15 +3603,52 @@ button, input, textarea, select {
 .pillar-icon,
 .node-icon,
 .step-icon,
-.section06-card-icon {
+.section06-card-icon,
+.impact-mark,
+.process-close-mark,
+.section06-callout-icon {
   color:var(--purple2) !important;
 }
 @media (max-width:600px) {
   .pillar-icon svg,
   .node-icon svg,
   .step-icon svg,
-  .section06-card-icon svg {
+  .section06-card-icon svg,
+  .impact-mark svg,
+  .process-close-mark svg,
+  .section06-callout-icon svg {
     width:19px;
     height:19px;
   }
+}
+
+/* Nav-control icons (rail arrows, progress arrows, language caret):
+   previously plain unicode glyphs (←, →, ⌄) with inconsistent font
+   fallback across iOS/Android; now share the same SVG line-icon style. */
+.rail-btn svg,
+.pbtn svg {
+  display:block;
+  margin:auto;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:2;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  vector-effect:non-scaling-stroke;
+}
+.rail-btn svg { width:16px; height:16px; }
+.pbtn svg { width:14px; height:14px; }
+.lang-caret {
+  display:inline-block;
+  width:10px;
+  height:10px;
+  margin-left:2px;
+  vertical-align:middle;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:2.4;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  position:relative;
+  top:-1px;
 }
