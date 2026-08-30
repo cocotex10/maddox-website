@@ -39,8 +39,6 @@ h1 span,h2 span{color:var(--purple)}
 .actions{display:flex;gap:12px;flex-wrap:wrap}
 .btn-dark{background:var(--ink);color:#fff;border:0;border-radius:999px;padding:14px 22px;font-weight:700;font-size:12px}
 .btn-outline{background:#fff;color:var(--ink);border:1px solid #d7d2dc;border-radius:999px;padding:13px 22px;font-weight:700;font-size:12px}
-.hero-tags{margin-top:32px;display:flex;gap:13px;flex-wrap:wrap;font-size:9px;letter-spacing:.14em;font-weight:700;color:#4d4854}
-.hero-tags b{color:var(--purple)}
 .hero-photo{position:relative;overflow:hidden;background:#f3f1f5;display:flex;align-items:center;justify-content:center}
 .hero-photo img{width:100%;height:100%;object-fit:contain;object-position:center;display:block;filter:saturate(.92);background:#f3f1f5}
 .photo-card{position:absolute;right:38px;bottom:42px;background:rgba(255,255,255,.94);padding:20px 22px;width:205px;box-shadow:0 20px 50px rgba(0,0,0,.12)}
@@ -49,31 +47,8 @@ h1 span,h2 span{color:var(--purple)}
 .panel-inner{height:100%;padding:110px 7vw 80px;display:flex;flex-direction:column;justify-content:center}
 .dark{background:var(--dark);color:#fff}
 .soft{background:var(--soft)}
-.section-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
 .section-title{font-size:clamp(42px,5vw,70px);line-height:.98}
-.body{color:var(--muted);font-size:15px;line-height:1.7;max-width:560px}
-.dark .body{color:#c9c4cf}
 .dark .kicker{color:#b994ff}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:40px}
-.card{background:#fff;border:1px solid var(--line);padding:24px;min-height:185px;transition:.2s}
-.card:hover{transform:translateY(-3px);border-color:#cdb8f0}
-.card.darkcard{background:#17151c;border-color:#2b2731;color:#fff}
-.card-num{font-size:10px;color:var(--purple);font-weight:700;letter-spacing:.1em}
-.card h3{font-size:17px;margin:38px 0 10px}
-.card p{font-size:11px;line-height:1.5;color:var(--muted);margin:0}
-.dark .card p{color:#bdb7c5}
-.solution-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:0;border-top:1px solid var(--line);margin-top:45px}
-.solution{padding:24px 18px;border-right:1px solid var(--line);min-height:205px}
-.solution:first-child{border-left:1px solid var(--line)}
-.solution-icon{font-size:22px;color:var(--purple);margin-bottom:35px}
-.solution h3{font-size:13px;line-height:1.2;margin:0 0 10px}
-.solution p{font-size:10px;line-height:1.45;color:var(--muted);margin:0}
-.photo-band{display:grid;grid-template-columns:42% 58%;height:100%}
-.photo-band img{width:100%;height:100%;object-fit:contain;object-position:center;background:#f3f1f5}
-.band-copy{padding:120px 7vw;display:flex;flex-direction:column;justify-content:center}
-.pill-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
-.pill{background:#fff;border:1px solid var(--line);padding:8px 12px;border-radius:999px;font-size:9px;font-weight:700}
-.dark .pill{background:#17151c;border-color:#2c2833;color:#fff}
 .industry-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:42px}
 .industry{padding:25px;background:#fff;border:1px solid var(--line);min-height:170px}
 .industry strong{display:block;font-size:13px;margin-bottom:14px}
@@ -101,53 +76,25 @@ h1 span,h2 span{color:var(--purple)}
   .hero-copy{padding:110px 28px 150px;z-index:2;background:linear-gradient(90deg,rgba(255,255,255,.97),rgba(255,255,255,.72))}
   .hero-photo{position:absolute;inset:0;opacity:.48;display:flex;align-items:center;justify-content:center}
   .hero-copy h1{font-size:54px}
-  .panel-inner{padding:95px 30px 95px}
-  .section-grid,.photo-band,.contact-box{grid-template-columns:1fr;gap:30px}
-  .cards{grid-template-columns:1fr}
-  .solution-grid{grid-template-columns:repeat(3,1fr)}
+  .panel-inner{padding:95px 30px 95px}.contact-box{grid-template-columns:1fr;gap:30px}
   .industry-grid{grid-template-columns:1fr 1fr}
-  .photo-band img{height:38vh}
-  .band-copy{padding:40px 30px}
   .progress{padding:0 14px}
-  .progress-hint{display:none}
-}
+  .progress-hint{display:none}}
 @media(max-width:600px){
   .rail{display:none}
   .viewport{width:100%}
-  .solution-grid{grid-template-columns:1fr 1fr}
-  .industry-grid{grid-template-columns:1fr}
-}
+  .industry-grid{grid-template-columns:1fr}}
 
 .challenge-panel{padding-top:115px;padding-bottom:95px}
-.challenge-intro{align-items:start}
-.challenge-intro .section-title{max-width:700px}
-.challenge-intro .body{margin-top:0;margin-bottom:20px}
 .challenge-grid{display:grid;grid-template-columns:repeat(4,1fr);margin-top:58px;border-top:1px solid rgba(255,255,255,.16);border-bottom:1px solid rgba(255,255,255,.16)}
-.challenge-item{padding:25px 22px 27px 0;min-height:155px;border-right:1px solid rgba(255,255,255,.12);display:flex;gap:18px}
-.challenge-item:not(:first-child){padding-left:22px}
-.challenge-item:last-child{border-right:0}
-.challenge-num{font-size:10px;color:#b994ff;font-weight:700;letter-spacing:.1em;flex:0 0 auto}
-.challenge-item h3{font-size:14px;margin:0 0 12px;color:#fff}
-.challenge-item p{font-size:10.5px;line-height:1.55;color:#c9c4cf;margin:0;max-width:180px}
-.challenge-footer{display:flex;align-items:center;justify-content:space-between;gap:30px;margin-top:28px}
-.challenge-footer span{font-size:11px;color:#b994ff;letter-spacing:.04em}
-.challenge-footer strong{font-size:12px;color:#fff;font-weight:600}
 
 @media(max-width:900px){
-  .challenge-grid{grid-template-columns:1fr 1fr}
-  .challenge-item:nth-child(2){border-right:0}
-  .challenge-item:nth-child(3){padding-left:0}
-  .challenge-footer{align-items:flex-start;flex-direction:column}
-}
+  .challenge-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){
-  .challenge-grid{grid-template-columns:1fr}
-  .challenge-item,.challenge-item:not(:first-child){padding:22px 0;border-right:0;border-bottom:1px solid rgba(255,255,255,.12)}
-  .challenge-item:last-child{border-bottom:0}
-  .challenge-footer{margin-top:24px}
-}
+  .challenge-grid{grid-template-columns:1fr}}/* Section 02 — El desafío */
 
 
-/* Section 02 — El desafío */
+
 .challenge-panel {
   background:
     radial-gradient(circle at 82% 72%, rgba(124,58,237,.13), transparent 28%),
@@ -183,10 +130,13 @@ h1 span,h2 span{color:var(--purple)}
   font-weight: 700;
   letter-spacing: .08em;
   text-transform: uppercase;
+  line-height: 1.4;
 }
 .challenge-label span {
   color: #a970ff;
   font-size: 15px;
+  line-height: 1.4;
+  display: inline-block;
 }
 .challenge-header {
   position: relative;
@@ -310,8 +260,7 @@ h1 span,h2 span{color:var(--purple)}
   .challenge-headline { padding-right: 40px; }
   .challenge-headline h2 { font-size: 48px; }
   .challenge-pillar { gap: 12px; padding-right: 16px; margin-right: 16px; }
-  .pillar-icon { flex-basis: 44px; width: 44px; height: 44px; }
-}
+  .pillar-icon { flex-basis: 44px; width: 44px; height: 44px; }}
 
 @media (max-width: 900px) {
   .challenge-inner { padding: 96px 30px 82px; }
@@ -320,8 +269,7 @@ h1 span,h2 span{color:var(--purple)}
   .challenge-headline h2 { font-size: 45px; }
   .challenge-pillars { grid-template-columns: repeat(2, 1fr); }
   .challenge-pillar:nth-child(2) { border-right: 0; margin-right: 0; }
-  .challenge-pillar:nth-child(3), .challenge-pillar:nth-child(4) { border-top: 1px solid rgba(255,255,255,.14); }
-}
+  .challenge-pillar:nth-child(3), .challenge-pillar:nth-child(4) { border-top: 1px solid rgba(255,255,255,.14); }}
 
 @media (max-width: 600px) {
   .challenge-inner { padding: 90px 24px 82px; }
@@ -336,8 +284,7 @@ h1 span,h2 span{color:var(--purple)}
     min-height: auto;
   }
   .challenge-pillar:first-child { border-top: 0; }
-  .challenge-close p { font-size: 16px; }
-}
+  .challenge-close p { font-size: 16px; }}
 
 @media (min-width: 901px) and (max-height: 850px) {
   .challenge-inner { padding-top: 62px; padding-bottom: 58px; }
@@ -348,11 +295,10 @@ h1 span,h2 span{color:var(--purple)}
   .challenge-pillar { min-height: 112px; padding-top: 14px; }
   .challenge-pillar p { font-size: 10px; }
   .challenge-close { margin-top: 16px; }
-  .challenge-close p { font-size: 15px; }
-}
+  .challenge-close p { font-size: 15px; }}/* Section 02 — final desktop composition refinement */
 
 
-/* Section 02 — final desktop composition refinement */
+
 .challenge-inner {
   padding: 42px 7vw 48px;
   justify-content: center;
@@ -409,9 +355,9 @@ h1 span,h2 span{color:var(--purple)}
   bottom: 48px;
   height: 135px;
   opacity: .30;
-}
+}/* Screens with less vertical room: prioritize the complete composition. */
 
-/* Screens with less vertical room: prioritize the complete composition. */
+
 @media (max-height: 780px) and (min-width: 901px) {
   .challenge-inner {
     padding-top: 28px;
@@ -439,14 +385,13 @@ h1 span,h2 span{color:var(--purple)}
   .challenge-wave {
     bottom: 38px;
     height: 110px;
-  }
-}
-
-
-/* =========================================================
+  }}/* =========================================================
    03 — Nuestras soluciones
    Responsive by design: radial desktop / grid tablet / list mobile
    ========================================================= */
+
+
+
 .solutions-panel {
   background:
     radial-gradient(circle at 76% 42%, rgba(124,58,237,.035), transparent 34%),
@@ -483,10 +428,13 @@ h1 span,h2 span{color:var(--purple)}
   color: #17151c;
   text-transform: uppercase;
   margin-bottom: 24px;
+  line-height: 1.4;
 }
 .solutions-label span {
   color: var(--purple2);
   font-size: 15px;
+  line-height: 1.4;
+  display: inline-block;
 }
 
 .solutions-title {
@@ -688,9 +636,9 @@ h1 span,h2 span{color:var(--purple)}
 }
 .solutions-impact strong {
   color: var(--purple2);
-}
+}/* Tablet: convert the radial system into a balanced 2-column capability grid. */
 
-/* Tablet: convert the radial system into a balanced 2-column capability grid. */
+
 @media (max-width: 1100px) {
   .solutions-inner {
     grid-template-columns: 1fr;
@@ -712,10 +660,9 @@ h1 span,h2 span{color:var(--purple)}
     min-height: 500px;
     margin: 18px auto 0;
   }
-  .solutions-impact { margin-top: 18px; }
-}
+  .solutions-impact { margin-top: 18px; }}/* Mobile: prioritize legibility and replace the radial layout with a single-column list. */
 
-/* Mobile: prioritize legibility and replace the radial layout with a single-column list. */
+
 @media (max-width: 700px) {
   .solutions-inner {
     display: block;
@@ -780,16 +727,15 @@ h1 span,h2 span{color:var(--purple)}
     padding-top: 18px;
   }
   .solutions-impact p { font-size: 13px; }
-  .impact-mark { width: 34px; height: 34px; flex-basis: 34px; }
-}
-
-
-/* =========================================================
+  .impact-mark { width: 34px; height: 34px; flex-basis: 34px; }}/* =========================================================
    Maddox global responsive correction — Section 03
    Keep every element inside the visible section.
-   ========================================================= */
+   ========================================================= *//* Desktop: radial system fits the actual panel height. */
 
-/* Desktop: radial system fits the actual panel height. */
+
+
+
+
 @media (min-width: 1101px) {
   .solutions-inner {
     padding: 58px 5vw 46px;
@@ -854,11 +800,10 @@ h1 span,h2 span{color:var(--purple)}
 
   .solutions-impact {
     padding-top: 12px;
-  }
-}
-
-/* Tablet: use a clean 2-column capability layout instead of forcing
+  }}/* Tablet: use a clean 2-column capability layout instead of forcing
    the desktop radial system into a narrow viewport. */
+
+
 @media (min-width: 701px) and (max-width: 1100px) {
   .solutions-inner {
     display: grid;
@@ -957,21 +902,19 @@ h1 span,h2 span{color:var(--purple)}
 
   .solutions-impact p {
     font-size: 13px;
-  }
-}
+  }}/* Small mobile: single-column capabilities, no radial overflow. */
 
-/* Small mobile: single-column capabilities, no radial overflow. */
+
 @media (max-width: 700px) {
   .solutions-inner {
     padding-top: 76px;
-  }
-}
-
-
-/* =========================================================
+  }}/* =========================================================
    Global responsive composition
    All sections adapt to viewport height/width.
    ========================================================= */
+
+
+
 .challenge-panel .challenge-inner {
   height: 100%;
   min-height: 0;
@@ -1045,8 +988,7 @@ h1 span,h2 span{color:var(--purple)}
     bottom: 34px;
     height: 120px;
     opacity: .22;
-  }
-}
+  }}
 
 @media (max-width: 700px) {
   .challenge-panel .challenge-inner {
@@ -1102,10 +1044,9 @@ h1 span,h2 span{color:var(--purple)}
 
   .challenge-panel .challenge-close span {
     font-size: 8px;
-  }
-}
+  }}/* Make the horizontal navigation control unobtrusive and self-hiding. */
 
-/* Make the horizontal navigation control unobtrusive and self-hiding. */
+
 .progress {
   height: 40px;
   bottom: 7px;
@@ -1146,421 +1087,15 @@ h1 span,h2 span{color:var(--purple)}
     padding: 0 12px;
   }
   .progress-hint { display: none; }
-  .progress-line { max-width: 180px; }
-}
-
-
-/* 04 — Cómo trabajamos
-   Responsive fix only. Typography intentionally unchanged. */
-.process-panel {
-  background: radial-gradient(circle at 74% 18%, rgba(124,58,237,.035), transparent 30%), #fff;
-  color: #111014;
-  overflow-y: auto;
-  overflow-x: hidden;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(124,58,237,.45) transparent;
-}
-
-.process-panel::-webkit-scrollbar {
-  width: 5px;
-}
-
-.process-panel::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.process-panel::-webkit-scrollbar-thumb {
-  background: rgba(124,58,237,.45);
-  border-radius: 10px;
-}
-
-.process-inner {
-  min-height: 100%;
-  height: auto;
-  padding: 54px 6vw 58px;
-  display: grid;
-  grid-template-rows: auto auto auto;
-  align-content: center;
-  gap: 26px;
-  overflow: visible;
-}
-
-.process-top {
-  display: grid;
-  grid-template-columns: minmax(380px,.72fr) minmax(480px,1.28fr);
-  gap: 42px;
-  align-items: center;
-}
-
-.process-copy {
-  max-width: 610px;
-  z-index: 2;
-}
-
-.process-label {
-  display:flex;
-  align-items:center;
-  gap:10px;
-  font-size:11px;
-  font-weight:700;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-  margin-bottom:18px;
-}
-
-.process-label span {
-  color:var(--purple2);
-  font-size:15px;
-}
-
-.process-title {
-  font-size:clamp(46px,5vw,70px);
-  line-height:.98;
-  letter-spacing:-.045em;
-  margin:0;
-  color:#111014;
-}
-
-.process-title span {
-  color:var(--purple2);
-}
-
-.process-rule {
-  width:58px;
-  height:3px;
-  background:var(--purple2);
-  margin:22px 0 20px;
-}
-
-.process-lead {
-  max-width:560px;
-  color:#5f5a66;
-  font-size:14px;
-  line-height:1.65;
-  margin:0;
-}
-
-.process-image {
-  position:relative;
-  height:clamp(220px,30vh,320px);
-  overflow:hidden;
-  border-radius:0 0 0 110px;
-  background:#eeeaf3;
-}
-
-.process-image::after {
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.22) 24%,transparent 55%);
-}
-
-.process-image img {
-  width:100%;
-  height:100%;
-  display:block;
-  object-fit:cover;
-  object-position:center;
-}
-
-.process-steps {
-  position:relative;
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:18px;
-  z-index:3;
-}
-
-.process-line {
-  position:absolute;
-  top:0;
-  left:10%;
-  right:10%;
-  height:2px;
-  background:linear-gradient(90deg,var(--purple2),#bda0f3);
-  transform:translateY(-1px);
-  z-index:0;
-}
-
-.process-step {
-  position:relative;
-  z-index:1;
-  padding:42px 24px 20px;
-  min-height:150px;
-  border:1px solid #ebe6f0;
-  border-radius:16px;
-  background:rgba(255,255,255,.96);
-  box-shadow:0 14px 34px rgba(31,18,48,.07);
-}
-
-.step-icon {
-  position:absolute;
-  top:-22px;
-  left:24px;
-  width:44px;
-  height:44px;
-  border:1px solid #d9c8f5;
-  border-radius:50%;
-  background:#fff;
-  color:var(--purple2);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:18px;
-}
-
-.step-number {
-  color:var(--purple2);
-  font-size:11px;
-  font-weight:700;
-  margin-bottom:4px;
-}
-
-.process-step h3 {
-  font-size:14px;
-  text-transform:uppercase;
-  margin:0 0 9px;
-  color:#16131a;
-}
-
-.process-step h3::after {
-  content:"";
-  display:block;
-  width:26px;
-  height:2px;
-  background:var(--purple2);
-  margin-top:8px;
-}
-
-.process-step p {
-  color:#68626e;
-  font-size:10px;
-  line-height:1.5;
-  margin:0;
-}
-
-.process-close {
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:18px;
-  border-top:1px solid #ece8f0;
-  padding-top:16px;
-}
-
-.process-close-mark {
-  width:38px;
-  height:38px;
-  flex:0 0 38px;
-  border:1px solid #cdb7ee;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:var(--purple2);
-}
-
-.process-close p {
-  margin:0;
-  color:#25212b;
-  font-size:15px;
-  line-height:1.35;
-}
-
-.process-close strong {
-  color:var(--purple2);
-}
-
-/* Reduced desktop height: preserve the desktop composition, but allow the
-   section itself to scroll instead of clipping the lower content. */
-@media (max-height:780px) and (min-width:1101px) {
-  .process-inner {
-    align-content:start;
-    padding-top:34px;
-    padding-bottom:48px;
-    gap:18px;
-  }
-
-  .process-top {
-    gap:30px;
-  }
-
-  .process-label {
-    margin-bottom:12px;
-  }
-
-  .process-title {
-    font-size:clamp(40px,4.4vw,58px);
-  }
-
-  .process-rule {
-    margin:16px 0 13px;
-  }
-
-  .process-lead {
-    font-size:12px;
-  }
-
-  .process-image {
-    height:220px;
-  }
-
-  .process-step {
-    min-height:125px;
-    padding:37px 18px 14px;
-  }
-
-  .process-step p {
-    font-size:9px;
-  }
-
-  .process-close {
-    padding-top:9px;
-  }
-
-  .process-close p {
-    font-size:13px;
-  }
-}
-
-/* Reduced width: the composition changes, and the section becomes naturally
-   taller than the viewport when necessary. */
-@media (max-width:1100px) {
-  .process-inner {
-    min-height:100%;
-    height:auto;
-    padding:82px 5vw 72px;
-    align-content:start;
-    overflow:visible;
-  }
-
-  .process-top {
-    grid-template-columns:1fr;
-    gap:24px;
-  }
-
-  .process-copy {
-    max-width:760px;
-    text-align:center;
-    margin:0 auto;
-  }
-
-  .process-label {
-    justify-content:center;
-  }
-
-  .process-title {
-    font-size:clamp(43px,6vw,58px);
-  }
-
-  .process-rule {
-    margin-left:auto;
-    margin-right:auto;
-  }
-
-  .process-lead {
-    margin:0 auto;
-    max-width:700px;
-  }
-
-  .process-image {
-    height:min(34vw,270px);
-    border-radius:0 0 0 80px;
-  }
-
-  .process-steps {
-    grid-template-columns:repeat(2,1fr);
-    gap:28px 18px;
-    margin-top:8px;
-  }
-
-  .process-line {
-    display:none;
-  }
-
-  .process-close {
-    margin-top:2px;
-  }
-}
-
-/* Mobile: one readable column, with no fixed-height clipping. */
-@media (max-width:700px) {
-  .process-inner {
-    padding:84px 22px 84px;
-    gap:26px;
-  }
-
-  .process-copy {
-    text-align:left;
-  }
-
-  .process-label {
-    justify-content:flex-start;
-  }
-
-  .process-title {
-    font-size:clamp(38px,11vw,52px);
-  }
-
-  .process-lead {
-    font-size:12.5px;
-    line-height:1.6;
-  }
-
-  .process-image {
-    height:210px;
-    border-radius:0 0 0 56px;
-  }
-
-  .process-steps {
-    grid-template-columns:1fr;
-    gap:11px;
-  }
-
-  .process-step {
-    min-height:0;
-    padding:18px 16px 17px 66px;
-  }
-
-  .step-icon {
-    left:14px;
-    top:16px;
-    width:40px;
-    height:40px;
-  }
-
-  .process-step h3 {
-    font-size:12px;
-  }
-
-  .process-step p {
-    font-size:9.5px;
-  }
-
-  .process-close {
-    justify-content:flex-start;
-    gap:12px;
-    padding-top:16px;
-  }
-
-  .process-close-mark {
-    width:34px;
-    height:34px;
-    flex-basis:34px;
-  }
-
-  .process-close p {
-    font-size:12px;
-  }
-}
-
-
-
-/* =========================================================
+  .progress-line { max-width: 180px; }}/* =========================================================
    05 — Talento & Nearshore
    New section only. Sections 01–04 remain untouched.
    Responsive from the beginning.
    ========================================================= */
+
+
+
+
 .talent-panel {
   background: #fff;
   color: #111014;
@@ -1588,8 +1123,9 @@ h1 span,h2 span{color:var(--purple)}
   display:flex; align-items:center; gap:10px;
   font-size:11px; font-weight:700; letter-spacing:.12em;
   text-transform:uppercase; margin-bottom:20px;
+  line-height:1.4;
 }
-.talent-label span { color:var(--purple2); font-size:15px; }
+.talent-label span { color:var(--purple2); font-size:15px; line-height:1.4; display:inline-block; }
 
 .talent-title {
   margin:0;
@@ -1720,8 +1256,7 @@ h1 span,h2 span{color:var(--purple)}
   .talent-service { padding-top:14px; padding-bottom:15px; }
   .talent-service p { font-size:9px; }
   .talent-visual { min-height:430px; }
-  .talent-photo { height:430px; min-height:360px; }
-}
+  .talent-photo { height:430px; min-height:360px; }}
 
 @media (max-width:1100px) {
   .talent-inner {
@@ -1738,8 +1273,7 @@ h1 span,h2 span{color:var(--purple)}
   .talent-lead { margin:0 auto; }
   .talent-services { text-align:left; }
   .talent-visual { min-height:0; }
-  .talent-photo { width:min(92vw,760px); height:min(52vw,480px); min-height:300px; border-radius:0 70px 0 70px; }
-}
+  .talent-photo { width:min(92vw,760px); height:min(52vw,480px); min-height:300px; border-radius:0 70px 0 70px; }}
 
 @media (max-width:700px) {
   .talent-inner { padding:84px 22px 84px; gap:28px; }
@@ -1763,15 +1297,14 @@ h1 span,h2 span{color:var(--purple)}
     min-height:0;
     border-radius:0 48px 0 48px;
   }
-  .talent-orbit { display:none; }
-}
-
-
-/* =========================================================
+  .talent-orbit { display:none; }}/* =========================================================
    MADDOX — Responsive foundation
    Existing section designs preserved; fixes interaction/layout only.
    Typography restored to V1.9 standard.
    ========================================================= */
+
+
+
 html, body {
   overflow: hidden;
   overscroll-behavior: none;
@@ -1818,10 +1351,10 @@ html, body {
 .panel::-webkit-scrollbar-thumb {
   background: rgba(124,58,237,.38);
   border-radius: 10px;
-}
-
-/* Mobile brand: the desktop rail disappears below 600px, so the logo
+}/* Mobile brand: the desktop rail disappears below 600px, so the logo
    remains visible on every mobile section. */
+
+
 .mobile-brand {
   display: none;
 }
@@ -1855,10 +1388,10 @@ html, body {
 
   .progress {
     z-index: 60;
-  }
-
-  /* Critical Android/mobile fix: vertical scrolling belongs to the panel,
+  }/* Critical Android/mobile fix: vertical scrolling belongs to the panel,
      not to a nested inner container. */
+
+  
   .panel {
     height: 100%;
     max-height: none;
@@ -1878,42 +1411,31 @@ html, body {
 
   .solutions-panel {
     touch-action: pan-y;
-  }
-}
-
-/* Tablet and narrow desktop: panels may become taller than the viewport.
+  }}/* Tablet and narrow desktop: panels may become taller than the viewport.
    This prevents lower content from being trapped by a fixed-height layout. */
+
+
 @media (min-width: 601px) and (max-width: 1100px) {
   .panel {
     overflow-y: auto;
-  }
-
-  .solutions-panel .solutions-inner,
-  .process-panel .process-inner,
-  .talent-panel .talent-inner {
+  }.solutions-panel .solutions-inner, .talent-panel .talent-inner{
     height: auto;
     min-height: 100%;
     overflow: visible;
-  }
-}
-
-/* Short desktop windows: allow the panel to scroll rather than clipping
+  }}/* Short desktop windows: allow the panel to scroll rather than clipping
    content underneath the fixed progress control. */
+
+
 @media (min-width: 1101px) and (max-height: 820px) {
   .panel {
     overflow-y: auto;
-  }
-
-  .solutions-panel .solutions-inner,
-  .process-panel .process-inner,
-  .talent-panel .talent-inner {
+  }.solutions-panel .solutions-inner, .talent-panel .talent-inner{
     height: auto;
     min-height: 100%;
     overflow: visible;
-  }
-}
+  }}/* V1.9 typography lock — no font substitution. */
 
-/* V1.9 typography lock — no font substitution. */
+
 body,
 button,
 input,
@@ -1925,35 +1447,23 @@ label,
 small,
 span {
   font-family: "Century Gothic", "Avenir Next", Avenir, Arial, sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.hero-title,
-.challenge-headline h2,
-.solutions-title,
-.process-title,
-.talent-title {
+}h1, h2, h3, h4, h5, h6, .challenge-headline h2, .solutions-title, .talent-title{
   font-family: Georgia, "Times New Roman", serif;
   font-weight: 400;
-}
-
-
-/* =========================================================
+}/* =========================================================
    MADDOX SESSION INTRO
    Based on user-provided maddox-intro.html.
    Responsive and independent from the site sections.
    ========================================================= */
+
+
+
 #maddox-intro {
   position: fixed;
   inset: 0;
   width: 100%;
   height: 100dvh;
-  min-height: 100vh;
+  height: var(--real-vh, 100dvh);
   background: #0a0a0c;
   display: flex;
   align-items: center;
@@ -2056,9 +1566,9 @@ h6,
 @keyframes maddoxIntroHide {
   0% { opacity: 1; visibility: visible; }
   100% { opacity: 0; visibility: hidden; }
-}
+}/* Responsive sizing for phones and narrow Android screens. */
 
-/* Responsive sizing for phones and narrow Android screens. */
+
 @media (max-width: 600px) {
   #maddox-intro { height: 100dvh; min-height: 100svh; }
   .maddox-intro-mark {
@@ -2066,15 +1576,13 @@ h6,
     letter-spacing: .22em;
     max-width: 90vw;
   }
-  .maddox-intro-word { animation-duration: 1.15s; }
-}
+  .maddox-intro-word { animation-duration: 1.15s; }}
 
 @media (max-width: 360px) {
   .maddox-intro-mark {
     font-size: 2.15rem;
     letter-spacing: .16em;
-  }
-}
+  }}
 
 @media (prefers-reduced-motion: reduce) {
   .maddox-intro-glow,
@@ -2092,65 +1600,19 @@ h6,
   .maddox-intro-dot { transform: scale(1); }
   #maddox-intro {
     animation: maddoxIntroHide .4s ease-in .6s forwards;
-  }
-}
-
-/* =========================================================
+  }}/* =========================================================
    MADDOX TYPOGRAPHY — FIXED STANDARD
    Large titles: Georgia only
    Small text / UI: Century Gothic
-   ========================================================= */
-h1, h2,
-.section-title,
-.challenge-headline h2,
-.solutions-title,
-.process-title,
-.talent-title,
-.contact h2,
-.photo-card strong {
+   ========================================================= */h1, h2, .section-title, .challenge-headline h2, .solutions-title, .talent-title, .contact h2, .photo-card strong{
   font-family: Georgia, "Times New Roman", serif !important;
   font-weight: 400 !important;
-}
-
-p,
-.body,
-.lead,
-.kicker,
-.challenge-label,
-.challenge-copy,
-.challenge-pillar h3,
-.challenge-pillar p,
-.challenge-close,
-.solutions-label,
-.solutions-lead,
-.solution-node h3,
-.solution-node p,
-.solutions-impact,
-.process-label,
-.process-lead,
-.process-step h3,
-.process-step p,
-.process-close,
-.talent-label,
-.talent-lead,
-.talent-service h3,
-.talent-service p,
-.talent-close,
-nav,
-button,
-label,
-small,
-.rail-label,
-.rail-num,
-.progress,
-.cta,
-.btn-dark,
-.btn-outline {
+}p, .lead, .kicker, .challenge-label, .challenge-copy, .challenge-pillar h3, .challenge-pillar p, .challenge-close, .solutions-label, .solutions-lead, .solution-node h3, .solution-node p, .solutions-impact, .talent-label, .talent-lead, .talent-service h3, .talent-service p, .talent-close, nav, button, label, small, .rail-label, .rail-num, .progress, .cta, .btn-dark, .btn-outline{
   font-family: "Century Gothic", "Avenir Next", Avenir, Arial, sans-serif !important;
-}
+}/* Session intro — slower, more visible presentation */
 
 
-/* Session intro — slower, more visible presentation */
+
 #maddox-intro .maddox-intro-glow {
   animation-duration: 4.6s;
 }
@@ -2183,10 +1645,9 @@ small,
 @media (max-width: 600px) {
   #maddox-intro .maddox-intro-mark {
     font-size: clamp(2.2rem, 14vw, 4.2rem);
-  }
-}
+  }}/* Maddox session intro — final timing: 3.5 seconds */
 
-/* Maddox session intro — final timing: 3.5 seconds */
+
 #maddox-intro .maddox-intro-glow {
   animation-duration: 3.2s;
 }
@@ -2214,60 +1675,27 @@ small,
 #maddox-intro.maddox-intro-exit {
   animation-delay: 2.9s;
   animation-duration: .6s;
-}
-
-/* =========================================================
+}/* =========================================================
    MADDOX — FINAL GLOBAL TYPOGRAPHY STANDARD
    Applies to the entire site: sections 01–08 and future sections.
    Large titles: Georgia only.
    Small text / descriptions / UI: Century Gothic only.
    Color changes are allowed; font-family changes inside a title are not.
-   ========================================================= */
-h1, h2, h3, h4, h5, h6,
-h1 *, h2 *, h3 *, h4 *, h5 *, h6 *,
-.hero h1, .hero h1 *,
-.challenge-headline h2, .challenge-headline h2 *,
-.solutions-title, .solutions-title *,
-.process-title, .process-title *,
-.talent-title, .talent-title * {
+   ========================================================= */h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *, .hero h1, .hero h1 *, .challenge-headline h2, .challenge-headline h2 *, .solutions-title, .solutions-title *, .talent-title, .talent-title *{
   font-family: Georgia, "Times New Roman", serif !important;
-}
-
-p, p *,
-.kicker, .kicker *,
-.lead, .lead *,
-.challenge-label, .challenge-label *,
-.challenge-copy, .challenge-copy *,
-.challenge-pillar, .challenge-pillar *,
-.challenge-close, .challenge-close *,
-.solutions-label, .solutions-label *,
-.solutions-lead, .solutions-lead *,
-.solution-node, .solution-node *,
-.solutions-impact, .solutions-impact *,
-.process-label, .process-label *,
-.process-lead, .process-lead *,
-.process-step, .process-step *,
-.process-close, .process-close *,
-.talent-label, .talent-label *,
-.talent-lead, .talent-lead *,
-.talent-service, .talent-service *,
-.talent-close, .talent-close *,
-.rail, .rail *,
-.topbar, .topbar *,
-.progress, .progress *,
-button, input, textarea, select {
+}p, p *, .kicker, .kicker *, .lead, .lead *, .challenge-label, .challenge-label *, .challenge-copy, .challenge-copy *, .challenge-pillar, .challenge-pillar *, .challenge-close, .challenge-close *, .solutions-label, .solutions-label *, .solutions-lead, .solutions-lead *, .solution-node, .solution-node *, .solutions-impact, .solutions-impact *, .talent-label, .talent-label *, .talent-lead, .talent-lead *, .talent-service, .talent-service *, .talent-close, .talent-close *, .rail, .rail *, .topbar, .topbar *, .progress, .progress *, button, input, textarea, select{
   font-family: "Century Gothic", "Avenir Next", Avenir, Arial, sans-serif !important;
-}
+}/* Intro is intentionally independent, but follows the same typography rule. */
 
-/* Intro is intentionally independent, but follows the same typography rule. */
+
 #maddox-intro .maddox-intro-mark,
 #maddox-intro .maddox-intro-mark * {
   font-family: "Century Gothic", "Avenir Next", Avenir, Arial, sans-serif !important;
-}
-
-/* =========================================================
+}/* =========================================================
    MADDOX SESSION INTRO — FINAL 3.0 SECOND TIMING
    ========================================================= */
+
+
 #maddox-intro .maddox-intro-glow {
   animation-duration: 2.8s !important;
 }
@@ -2295,15 +1723,15 @@ button, input, textarea, select {
 #maddox-intro.maddox-intro-exit {
   animation-delay: 2.40s !important;
   animation-duration: .60s !important;
-}
-
-
-/* =========================================================
+}/* =========================================================
    MADDOX — LOGO STANDARD
    Dark background: supplied white logo.
    Light background: supplied dark logo.
    Never modify either asset.
    ========================================================= */
+
+
+
 .rail .logo {
   display:block;
   width:132px;
@@ -2312,9 +1740,9 @@ button, input, textarea, select {
   object-fit:contain;
   object-position:left center;
   flex:0 0 auto;
-}
+}/* Mobile logo is intentionally independent from the rail. */
 
-/* Mobile logo is intentionally independent from the rail. */
+
 .mobile-logo {
   display:none;
   position:fixed;
@@ -2337,8 +1765,7 @@ button, input, textarea, select {
   .rail .logo {
     width:68px;
     margin-bottom:30px;
-  }
-}
+  }}
 
 @media (max-width:600px) {
   .mobile-logo { display:block; }
@@ -2347,16 +1774,15 @@ button, input, textarea, select {
     width:112px;
     max-width:112px;
     height:auto;
-  }
-}
+  }}/* Hard bounds prevent any global image rule from enlarging the logo. */
 
-/* Hard bounds prevent any global image rule from enlarging the logo. */
+
 .rail > .logo,
 .mobile-logo > img {
   max-height:80px;
-}
+}/* Maddox intro — letter spacing matched to supplied logo */
 
-/* Maddox intro — letter spacing matched to supplied logo */
+
 #maddox-intro .maddox-intro-mark,
 #maddox-intro .maddox-intro-word {
   letter-spacing: 0.06em !important;
@@ -2365,10 +1791,9 @@ button, input, textarea, select {
   #maddox-intro .maddox-intro-mark,
   #maddox-intro .maddox-intro-word {
     letter-spacing: 0.04em !important;
-  }
-}
+  }}/* Consolidated fix — Section 02 mobile spacing */
 
-/* Consolidated fix — Section 02 mobile spacing */
+
 @media (max-width: 600px) {
   .challenge-panel {
     padding-top: 0 !important;
@@ -2379,29 +1804,15 @@ button, input, textarea, select {
   }
   .challenge-panel .challenge-header {
     margin-top: 0 !important;
-  }
-}
-
-/* Consolidated icon system — Sections 03 & 04 */
-.solution-icon,
-.node-icon,
-.pillar-icon,
-.step-icon,
-.process-label span {
+  }}/* Consolidated icon system — Sections 03 & 04 */.node-icon, .pillar-icon{
   color: var(--purple2) !important;
-}
-.solution-icon,
-.node-icon,
-.pillar-icon,
-.step-icon {
+}.node-icon, .pillar-icon{
   border-color: rgba(124,58,237,.30) !important;
-}
-.step-icon,
-.node-icon {
+}.node-icon{
   background: #fff !important;
-}
+}/* Consolidated responsive baseline */
 
-/* Consolidated responsive baseline */
+
 @media (max-width: 900px) {
   .panel {
     height: auto !important;
@@ -2410,8 +1821,7 @@ button, input, textarea, select {
     overflow-y: auto !important;
     overflow-x: hidden !important;
     -webkit-overflow-scrolling: touch;
-  }
-}
+  }}
 @media (max-width: 600px) {
   .viewport,
   .track {
@@ -2431,41 +1841,13 @@ button, input, textarea, select {
     overflow-x: hidden !important;
     touch-action: pan-y;
     padding-bottom: 22px;
-  }
-}
-
-/* FINAL SITE TYPOGRAPHY — do not override per section */
-h1, h2, h3, h4, h5, h6,
-h1 *, h2 *, h3 *, h4 *, h5 *, h6 *,
-.hero h1, .hero h1 *,
-.challenge-headline h2, .challenge-headline h2 *,
-.section-title, .section-title *,
-.solutions-title, .solutions-title *,
-.process-title, .process-title *,
-.talent-title, .talent-title *,
-.contact h2, .contact h2 * {
+  }}/* FINAL SITE TYPOGRAPHY — do not override per section */h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *, .hero h1, .hero h1 *, .challenge-headline h2, .challenge-headline h2 *, .section-title, .section-title *, .solutions-title, .solutions-title *, .talent-title, .talent-title *, .contact h2, .contact h2 *{
   font-family: Georgia, "Times New Roman", serif !important;
-}
-p, p *,
-.kicker, .kicker *, .lead, .lead *,
-.challenge-label, .challenge-label *,
-.challenge-copy, .challenge-copy *,
-.challenge-pillar, .challenge-pillar *,
-.challenge-close, .challenge-close *,
-.solutions-label, .solutions-label *,
-.solutions-lead, .solutions-lead *,
-.solution-node, .solution-node *,
-.solutions-impact, .solutions-impact *,
-.process-label, .process-label *, .process-lead, .process-lead *,
-.process-step, .process-step *, .process-close, .process-close *,
-.talent-label, .talent-label *, .talent-lead, .talent-lead *,
-.talent-service, .talent-service *, .talent-close, .talent-close *,
-.rail, .rail *, .topbar, .topbar *, .progress, .progress *,
-button, input, textarea, select {
+}p, p *, .kicker, .kicker *, .lead, .lead *, .challenge-label, .challenge-label *, .challenge-copy, .challenge-copy *, .challenge-pillar, .challenge-pillar *, .challenge-close, .challenge-close *, .solutions-label, .solutions-label *, .solutions-lead, .solutions-lead *, .solution-node, .solution-node *, .solutions-impact, .solutions-impact *, .talent-label, .talent-label *, .talent-lead, .talent-lead *, .talent-service, .talent-service *, .talent-close, .talent-close *, .rail, .rail *, .topbar, .topbar *, .progress, .progress *, button, input, textarea, select{
   font-family: "Century Gothic", "Avenir Next", Avenir, Arial, sans-serif !important;
-}
+}/* FINAL INTRO — exactly 3 seconds */
 
-/* FINAL INTRO — exactly 3 seconds */
+
 #maddox-intro .maddox-intro-glow { animation-duration: 2.8s !important; }
 #maddox-intro .maddox-intro-mark {
   animation:
@@ -2488,14 +1870,13 @@ button, input, textarea, select {
   #maddox-intro .maddox-intro-mark,
   #maddox-intro .maddox-intro-word {
     letter-spacing: .04em !important;
-  }
-}
-
-/* =========================================================
+  }}/* =========================================================
    V3.1 — MOBILE HEADER / LOGO
    Exactly one logo is visible on mobile.
    The logo has its own header zone and never overlaps CTA.
    ========================================================= */
+
+
 @media (max-width:600px) {
   .rail {
     display:none !important;
@@ -2540,20 +1921,11 @@ button, input, textarea, select {
 
   .hero-copy {
     padding-top:88px !important;
-  }
-}
-
-/* =========================================================
+  }}/* =========================================================
    V3.1 — UNIFIED ICON SYSTEM
    Sections 03 & 04: one consistent outline treatment,
    one Maddox violet, no mixed icon styles.
-   ========================================================= */
-.solution-icon,
-.node-icon,
-.pillar-icon,
-.step-icon,
-.process-step .step-icon,
-.solution .solution-icon {
+   ========================================================= */.node-icon, .pillar-icon{
   color:var(--purple2) !important;
   border:1px solid rgba(124,58,237,.42) !important;
   background:transparent !important;
@@ -2569,107 +1941,26 @@ button, input, textarea, select {
   font-size:18px !important;
   box-shadow:none !important;
   filter:none !important;
-}
-
-/* Prevent section-specific icon fills/backgrounds from reappearing. */
-.solution-icon *,
-.node-icon *,
-.pillar-icon *,
-.step-icon * {
+}/* Prevent section-specific icon fills/backgrounds from reappearing. */.node-icon *, .pillar-icon *{
   color:var(--purple2) !important;
   background:transparent !important;
   border-color:transparent !important;
-}
+}/* Keep the icon row clean on mobile. */
 
-/* Keep the icon row clean on mobile. */
-@media (max-width:600px) {
-  .solution-icon,
-  .node-icon,
-  .pillar-icon,
-  .step-icon {
+
+@media (max-width:600px) {.node-icon, .pillar-icon{
     width:38px !important;
     height:38px !important;
     min-width:38px !important;
     min-height:38px !important;
     font-size:16px !important;
-  }
-}
-
-/* =========================================================
-   V3.2 — SECTION 04 ONLY
-   ========================================================= */
-
-/* Keep the section fully readable when desktop height is reduced. */
-@media (max-height: 820px) and (min-width: 901px) {
-  .process-panel .process-inner {
-    align-content: start !important;
-    padding-top: 28px !important;
-    padding-bottom: 70px !important;
-    gap: 16px !important;
-  }
-
-  .process-panel .process-top {
-    gap: 24px !important;
-  }
-
-  .process-panel .process-title {
-    font-size: clamp(38px, 4.1vw, 54px) !important;
-  }
-
-  .process-panel .process-image {
-    height: 190px !important;
-  }
-
-  .process-panel .process-step {
-    min-height: 112px !important;
-    padding-top: 34px !important;
-    padding-bottom: 12px !important;
-  }
-
-  .process-panel .process-close {
-    padding-top: 8px !important;
-  }
-}
-
-/* The process connector must sit behind the cards and never cross icons. */
-.process-panel .process-line {
-  top: 0 !important;
-  left: 10% !important;
-  right: 10% !important;
-  height: 1px !important;
-  z-index: 0 !important;
-  opacity: .55 !important;
-}
-
-.process-panel .process-step {
-  z-index: 2 !important;
-}
-
-/* One consistent icon language: violet outline circle + violet mark. */
-.process-panel .step-icon {
-  background: #fff !important;
-  border: 1px solid rgba(124,58,237,.42) !important;
-  color: var(--purple2) !important;
-  box-shadow: none !important;
-}
-
-.process-panel .step-icon,
-.process-panel .step-icon * {
-  color: var(--purple2) !important;
-  font-family: "Century Gothic","Avenir Next",Avenir,Arial,sans-serif !important;
-  font-weight: 400 !important;
-}
-
-/* =========================================================
+  }}/* =========================================================
    V3.3 — FINAL MOBILE LOGO RULE
    One logo only. Contrast follows background.
    ========================================================= */
-@media (max-width: 600px) {
-  /* The desktop rail must never participate in mobile rendering. */
-  .rail,
-  .rail .logo,
-  .rail .logo-wrap,
-  .rail picture {
+
+
+@media (max-width: 600px) {/* The desktop rail must never participate in mobile rendering. */.rail, .rail .logo, .rail picture{
     display: none !important;
     visibility: hidden !important;
     opacity: 0 !important;
@@ -2699,25 +1990,19 @@ button, input, textarea, select {
     max-width: 104px !important;
     max-height: 34px !important;
     object-fit: contain !important;
-  }
+  }/* Keep the menu/CTA area separate from the logo. */
 
-  /* Keep the menu/CTA area separate from the logo. */
+  
   .topbar {
     padding-left: 138px !important;
     padding-right: 14px !important;
-  }
-}
-
-/* =========================================================
+  }}/* =========================================================
    V3.4 — DEFINITIVE iOS / ANDROID MOBILE LOGO FIX
    Exactly one logo is rendered below 600px.
    ========================================================= */
-@media screen and (max-width: 600px) {
-  .rail,
-  .rail .logo,
-  .rail .logo-wrap,
-  .rail picture,
-  .mobile-brand {
+
+
+@media screen and (max-width: 600px) {.rail, .rail .logo, .rail picture, .mobile-brand{
     display: none !important;
     visibility: hidden !important;
     opacity: 0 !important;
@@ -2753,36 +2038,17 @@ button, input, textarea, select {
     height: auto !important;
     max-height: 34px !important;
     object-fit: contain !important;
-  }
-}
-
-
-/* =========================================================
+  }}/* =========================================================
    SECTION 06 — PROFUNDIDAD TECNOLÓGICA
    Responsive, light theme, methodology-as-criterion concept.
    ========================================================= */
+
+
+
 .section-06 {
   background: #fbfbfd;
   color: #111016;
   overflow: hidden;
-}
-
-.section06-inner {
-  min-height: 100%;
-  box-sizing: border-box;
-  padding: clamp(34px, 4vw, 64px) clamp(34px, 5vw, 76px) 34px;
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
-}
-
-.section06-top {
-  display: grid;
-  grid-template-columns: minmax(390px, .92fr) minmax(500px, 1.08fr);
-  gap: clamp(28px, 4vw, 72px);
-  align-items: center;
-  flex: 1 1 auto;
-  min-height: 0;
 }
 
 .section06-copy { min-width: 0; }
@@ -2793,11 +2059,14 @@ button, input, textarea, select {
   gap:12px;
   color:#111016;
   margin-bottom:30px;
+  line-height:1.4;
 }
 .section06-kicker span {
   color:var(--purple2);
   font-weight:700;
   font-size:18px;
+  line-height:1.4;
+  display:inline-block;
 }
 
 .section06-title {
@@ -2854,15 +2123,6 @@ button, input, textarea, select {
   color:#2f2c35;
 }
 .section06-callout strong { color:var(--purple2); }
-
-.section06-visual {
-  position:relative;
-  min-height:430px;
-  height:100%;
-  max-width:820px;
-  justify-self:end;
-  width:100%;
-}
 .section06-context {
   position:absolute;
   top:0;right:5%;
@@ -2876,85 +2136,8 @@ button, input, textarea, select {
   text-align:left;
 }
 .section06-context strong { color:var(--purple2); font-size:13px; letter-spacing:.03em; }
-
-.section06-stack {
-  position:absolute;
-  width:330px;height:330px;
-  left:50%;top:52%;
-  transform:translate(-50%,-50%);
-}
-.section06-orbit {
-  position:absolute;
-  border:1px solid rgba(124,58,237,.20);
-  border-radius:50%;
-  left:50%;top:50%;
-  transform:translate(-50%,-50%);
-}
 .orbit-a { width:370px;height:170px;transform:translate(-50%,-50%) rotate(-18deg); }
 .orbit-b { width:330px;height:250px;transform:translate(-50%,-50%) rotate(22deg); }
-.orbit-c { width:410px;height:290px;transform:translate(-50%,-50%) rotate(72deg); }
-
-.section06-stone {
-  position:absolute;
-  left:50%;
-  width:190px;height:54px;
-  transform:translateX(-50%);
-  border-radius:50%;
-  background:linear-gradient(145deg,#f2f0f5,#8f8a96 60%,#403b46);
-  box-shadow:0 12px 28px rgba(40,34,52,.16);
-}
-.stone-1 { top:38px; transform:translateX(-50%) rotate(-2deg); }
-.stone-2 { top:91px; background:linear-gradient(145deg,#d6d1dc,#665f6d 65%,#302b35); transform:translateX(-50%) rotate(2deg); }
-.stone-3 { top:144px; background:linear-gradient(145deg,#9d74dc,#5f2bb4 65%,#30125f); box-shadow:0 14px 34px rgba(124,58,237,.30); }
-.stone-4 { top:197px; background:linear-gradient(145deg,#dedbe2,#716b76 65%,#37333b); transform:translateX(-50%) rotate(-2deg); }
-.stone-5 { top:250px; background:linear-gradient(145deg,#f5f4f6,#a09ba4 65%,#514c55); transform:translateX(-50%) rotate(2deg); }
-
-.section06-mark {
-  position:absolute;
-  left:50%;top:50%;
-  transform:translate(-50%,-50%);
-  width:78px;height:78px;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  background:#fff;
-  color:var(--purple2);
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:45px;
-  font-weight:700;
-  box-shadow:0 10px 32px rgba(124,58,237,.25);
-  border:1px solid rgba(124,58,237,.25);
-  z-index:3;
-}
-
-.section06-process {
-  position:absolute;
-  width:150px;
-  display:flex;
-  flex-direction:column;
-  gap:4px;
-  font-family:"Century Gothic","Avenir Next",Avenir,Arial,sans-serif !important;
-}
-.section06-process span {
-  color:#17141c;
-  font-weight:700;
-  font-size:12px;
-  letter-spacing:.025em;
-}
-.section06-process small { color:#55515b; font-size:11px; line-height:1.4; }
-.process-left { left:0; text-align:right; }
-.process-right { right:0; text-align:left; }
-.process-left::after,.process-right::before {
-  content:"";
-  position:absolute;top:7px;
-  width:58px;height:1px;background:rgba(124,58,237,.35);
-}
-.process-left::after { right:-70px; }
-.process-right::before { left:-70px; }
-.process-left { top:38%; }
-.process-left.process-mid { top:53%; }
-.process-left.process-bottom { top:67%; }
-.process-right { top:34%; }
-.process-right.process-mid { top:51%; }
-.process-right.process-bottom { top:68%; }
 
 .section06-disciplines-title {
   font-family:"Century Gothic","Avenir Next",Avenir,Arial,sans-serif !important;
@@ -3013,38 +2196,24 @@ button, input, textarea, select {
   font-size:clamp(15px,1.3vw,20px);
 }
 .section06-footer strong { color:var(--purple2); }
-.section06-quote-mark { color:var(--purple2); font-size:48px; line-height:.5; }
-.section06-footer-brand {
-  font-family:"Century Gothic","Avenir Next",Avenir,Arial,sans-serif !important;
-  font-size:16px;font-weight:700;letter-spacing:.02em;
-}
-.section06-footer-brand span { color:var(--purple2); }
+.section06-quote-mark { color:var(--purple2); font-size:48px; line-height:.5; }/* Responsive */
 
-/* Responsive */
+
 @media (max-width:1200px) {
-  .section06-inner { padding-left:32px;padding-right:32px;gap:18px; }
-  .section06-top { grid-template-columns:minmax(340px,.9fr) minmax(430px,1.1fr);gap:28px; }
   .section06-title { font-size:clamp(38px,4.6vw,58px); }
-  .section06-visual { min-height:390px; }
   .section06-disciplines { grid-template-columns:repeat(3,1fr); }
   .section06-card:nth-child(3) { border-right:0; }
-  .section06-card:nth-child(n+4) { border-top:1px solid rgba(25,20,32,.10); }
-}
+  .section06-card:nth-child(n+4) { border-top:1px solid rgba(25,20,32,.10); }}
 
 @media (max-width:900px) {
   .section-06 { overflow-y:auto !important; }
-  .section06-inner { min-height:auto;padding:82px 24px 76px; }
-  .section06-top { grid-template-columns:1fr; }
   .section06-title { font-size:clamp(40px,7vw,58px); }
-  .section06-visual { min-height:500px; max-width:760px; justify-self:center; }
   .section06-disciplines { grid-template-columns:repeat(2,1fr); }
   .section06-card:nth-child(3) { border-right:1px solid rgba(25,20,32,.10); }
   .section06-card:nth-child(even) { border-right:0; }
-  .section06-card:nth-child(n+3) { border-top:1px solid rgba(25,20,32,.10); }
-}
+  .section06-card:nth-child(n+3) { border-top:1px solid rgba(25,20,32,.10); }}
 
 @media (max-width:600px) {
-  .section06-inner { padding:76px 18px 74px; gap:18px; }
   .desktop-only { display:none; }
   .section06-kicker { margin-bottom:20px; }
   .section06-title { font-size:clamp(35px,10.5vw,48px); line-height:1; }
@@ -3053,20 +2222,9 @@ button, input, textarea, select {
   .section06-callout { margin-top:18px; padding:12px; }
   .section06-callout-icon { flex-basis:36px;width:36px;height:36px; }
   .section06-callout p { font-size:12px; }
-
-  .section06-visual { min-height:470px; }
   .section06-context { top:0;right:0;width:180px;font-size:10px; }
   .section06-context strong { font-size:10px; }
-  .section06-stack { width:250px;height:250px;top:52%; }
-  .section06-stone { width:150px;height:43px; }
-  .stone-1{top:27px}.stone-2{top:69px}.stone-3{top:111px}.stone-4{top:153px}.stone-5{top:195px}
-  .section06-mark { width:62px;height:62px;font-size:34px; }
-  .orbit-a{width:280px;height:130px}.orbit-b{width:250px;height:190px}.orbit-c{width:310px;height:220px}
-  .section06-process { width:105px; }
-  .section06-process span { font-size:9px; }
-  .section06-process small { font-size:9px; }
-  .process-left::after,.process-right::before { width:30px; }
-  .process-left::after { right:-39px; }.process-right::before { left:-39px; }
+  .orbit-a{width:280px;height:130px}.orbit-b{width:250px;height:190px}
   .section06-disciplines-title { font-size:11px; }
   .section06-disciplines { grid-template-columns:1fr; }
   .section06-card,
@@ -3077,17 +2235,15 @@ button, input, textarea, select {
   .section06-card-icon { grid-row:1 / span 3;margin:0; }
   .section06-card h3 { margin:4px 0 5px; }
   .section06-card p { margin-bottom:6px; }
-  .section06-footer { grid-template-columns:auto 1fr;gap:10px;font-size:14px; }
-  .section06-footer-brand { display:none; }
-}
-
-/* =========================================================
+  .section06-footer { grid-template-columns:auto 1fr;gap:10px;font-size:14px; }}/* =========================================================
    V3.6 — SECTION 06 EXACT MOCKUP VISUAL + REAL VERTICAL SCROLL
-   ========================================================= */
-
-/* The page uses a horizontal track globally, but Section 06 itself
+   ========================================================= *//* The page uses a horizontal track globally, but Section 06 itself
    becomes the vertical scroll container when its content is taller
    than the viewport. */
+
+
+
+
 .section-06 {
   height: 100% !important;
   min-height: 0 !important;
@@ -3108,58 +2264,16 @@ button, input, textarea, select {
 .section-06::-webkit-scrollbar-thumb {
   background: rgba(124,58,237,.42);
   border-radius: 99px;
-}
-
-.section06-inner {
-  min-height: 100% !important;
-  height: auto !important;
-  box-sizing: border-box;
-}
-
-.section06-top {
-  min-height: 0 !important;
-}
-
-.section06-visual {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  min-height: 0 !important;
-  height: auto !important;
-  max-width: none !important;
-}
-
-.section06-stack-image {
-  display: block;
-  width: min(100%, 860px);
-  height: auto;
-  max-height: none;
-  object-fit: contain;
-  object-position: center;
-}
-
-/* Reduced-height desktop: keep the complete lower content accessible by
+}/* Reduced-height desktop: keep the complete lower content accessible by
    allowing Section 06 itself to scroll rather than clipping it. */
+
+
 @media (min-width: 901px) and (max-height: 850px) {
   .section-06 {
     overflow-y: auto !important;
-  }
+  }}/* Tablet */
 
-  .section06-inner {
-    padding-top: 46px !important;
-    padding-bottom: 72px !important;
-  }
 
-  .section06-top {
-    flex: 0 0 auto !important;
-  }
-
-  .section06-stack-image {
-    width: min(100%, 760px);
-  }
-}
-
-/* Tablet */
 @media (max-width: 900px) {
   .track {
     touch-action: pan-x pan-y !important;
@@ -3169,32 +2283,10 @@ button, input, textarea, select {
     overflow-x: hidden !important;
     overflow-y: auto !important;
     touch-action: pan-y !important;
-  }
-
-  .section06-inner {
-    min-height: auto !important;
-    padding-top: 82px !important;
-    padding-bottom: 86px !important;
-  }
-
-  .section06-top {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: 26px !important;
-  }
-
-  .section06-visual {
-    width: 100% !important;
-    min-height: 0 !important;
-  }
-
-  .section06-stack-image {
-    width: min(100%, 820px) !important;
-  }
-}
-
-/* iOS / Android: content is intentionally allowed to exceed the viewport.
+  }}/* iOS / Android: content is intentionally allowed to exceed the viewport.
    The panel scrolls vertically; nothing is clipped by the horizontal track. */
+
+
 @media (max-width: 600px) {
   .track {
     overflow-x: auto !important;
@@ -3212,28 +2304,8 @@ button, input, textarea, select {
     touch-action: pan-y !important;
   }
 
-  .section06-inner {
-    min-height: 100dvh !important;
-    height: auto !important;
-    padding: 76px 18px 86px !important;
-  }
-
-  .section06-top {
-    grid-template-columns: 1fr !important;
-  }
-
   .section06-title {
     font-size: clamp(35px, 10.5vw, 48px) !important;
-  }
-
-  .section06-visual {
-    margin-top: 6px !important;
-  }
-
-  .section06-stack-image {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
   }
 
   .section06-disciplines {
@@ -3242,89 +2314,17 @@ button, input, textarea, select {
 
   .section06-footer {
     margin-top: 2px !important;
-  }
-}
+  }}/* No recreated logo in Section 06. */
 
-/* =========================================================
-   V3.7 — APPROVED CORRECTIONS ONLY
-   ========================================================= */
 
-/* Section 04: separate intro copy from the horizontal line/cards.
-   The four cards remain unchanged relative to each other. */
-.process-lead.section04-intro-spacing {
-  margin-bottom: 30px !important;
-}
-
-@media (max-width: 900px) {
-  .process-lead.section04-intro-spacing {
-    margin-bottom: 26px !important;
-  }
-}
-
-@media (max-width: 600px) {
-  .process-lead.section04-intro-spacing {
-    margin-bottom: 22px !important;
-  }
-}
-
-/* Section 06: the visual comes exclusively from the supplied image.
-   No CSS-generated oval stack is visible. */
-.section-06 .section06-visual {
-  overflow: visible !important;
-}
-
-.section-06 .section06-stack-image {
-  display: block !important;
-  width: min(100%, 860px) !important;
-  height: auto !important;
-  max-height: none !important;
-  object-fit: contain !important;
-  object-position: center !important;
-}
-
-/* No recreated logo in Section 06. */
 .section-06 .section06-footer {
   grid-template-columns: auto 1fr !important;
-}
-
-/* V3.8 — Section 06: approved rock-stack image only. */
-.section-06 .section06-visual {
-  position: relative !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  overflow: visible !important;
-}
-.section-06 .section06-stack-image {
-  display: block !important;
-  position: relative !important;
-  z-index: 3 !important;
-  width: min(100%, 620px) !important;
-  height: auto !important;
-  max-height: none !important;
-  object-fit: contain !important;
-}
-/* The six explanatory texts are HTML and remain outside the image. */
-.section-06 .section06-process {
-  z-index: 5 !important;
-}
-
-/* Mobile: image scales with width and the section remains vertically scrollable. */
-@media (max-width: 900px) {
-  .section-06 .section06-stack-image {
-    width: min(100%, 700px) !important;
-  }
-}
-@media (max-width: 600px) {
-  .section-06 .section06-stack-image {
-    width: 100% !important;
-  }
-}
-
-/* =========================================================
+}/* =========================================================
    V3.9 — SECTION 06 FINAL LAYOUT
    Clean rock asset + HTML callouts + responsive reflow.
    ========================================================= */
+
+
 .section-06{
   background:#fbfbfd !important;
   overflow-x:hidden !important;
@@ -3357,11 +2357,28 @@ button, input, textarea, select {
 }
 .section06-context strong{color:var(--purple2);font-size:12px;}
 .section06-main{
+  position:relative;
   display:grid;
   grid-template-columns:minmax(350px,.78fr) minmax(650px,1.22fr);
   gap:clamp(30px,4vw,70px);
   align-items:center;
 }
+.section06-ghost{
+  position:absolute;
+  right:-30px;
+  top:50%;
+  transform:translateY(-50%);
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:min(30vw,460px);
+  line-height:1;
+  color:var(--purple2);
+  opacity:.055;
+  z-index:1;
+  pointer-events:none;
+  user-select:none;
+  white-space:nowrap;
+}
+.section06-copy,.section06-layers{position:relative;z-index:2;}
 .section06-copy{min-width:0;}
 .section06-title{
   margin:0;
@@ -3371,7 +2388,6 @@ button, input, textarea, select {
   letter-spacing:-.035em;
   font-weight:700;
 }
-.section06-title span{color:var(--purple2);}
 .section06-rule{width:70px;height:3px;background:var(--purple2);margin:26px 0 22px;}
 .section06-lead{
   margin:0;
@@ -3400,70 +2416,48 @@ button, input, textarea, select {
   font-family:"Century Gothic","Avenir Next",Avenir,Arial,sans-serif !important;
   font-size:12px;line-height:1.42;
 }
-.section06-callout strong{color:var(--purple2);}
 
-.section06-rock-stage{
+.section06-layers{
   position:relative;
-  min-height:500px;
   width:100%;
-  max-width:900px;
+  max-width:640px;
   justify-self:end;
+  height:390px;
 }
-.section06-rocks{
+.layer{
   position:absolute;
-  left:50%;top:50%;
-  transform:translate(-50%,-50%);
-  width:min(62%,510px);
-  z-index:2;
-}
-.section06-rock-image{
-  display:block;
-  width:100%;
-  height:auto;
-  object-fit:contain;
-}
-.section06-step{
-  position:absolute;
-  z-index:4;
-  width:145px;
+  left:0;
+  height:64px;
+  border-radius:12px;
   display:flex;
-  flex-direction:column;
-  gap:4px;
+  align-items:center;
+  gap:14px;
+  padding:0 22px;
+  box-shadow:0 10px 22px rgba(20,10,40,.10);
   font-family:"Century Gothic","Avenir Next",Avenir,Arial,sans-serif !important;
+  font-size:13px;
+  transition:transform .2s ease;
 }
-.section06-step b{font-size:12px;color:#17141c;line-height:1.15;}
-.section06-step span{font-size:10.5px;color:#55515b;line-height:1.4;}
-.section06-step:after{
-  content:"";
-  position:absolute;
-  top:7px;
-  width:58px;
-  height:1px;
-  background:rgba(124,58,237,.38);
-}
-.step-1,.step-2,.step-3{left:0;text-align:right;}
-.step-4,.step-5,.step-6{right:0;text-align:left;}
-.step-1{top:24%}.step-2{top:44%}.step-3{top:64%}
-.step-4{top:23%}.step-5{top:44%}.step-6{top:64%}
-.step-1:after,.step-2:after,.step-3:after{right:-70px;}
-.step-4:after,.step-5:after,.step-6:after{left:-70px;}
+.layer-n{font-family:Georgia,"Times New Roman",serif !important;font-size:18px;flex:0 0 auto;opacity:.7;}
+.layer b{font-size:13px;letter-spacing:.02em;flex:0 0 auto;white-space:nowrap;}
+.layer-desc{font-size:10.5px;opacity:.82;font-weight:400;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.layer:hover{transform:translateY(-2px);}
+.l1{top:0;   width:70%; background:#efe9fb; color:#2c2438;}
+.l2{top:64px;width:76%; background:#d9c9f4; color:#241c33;}
+.l3{top:128px;width:84%; background:#b48eea; color:#211732;}
+.l4{top:192px;width:91%;background:#8a4fde; color:#fff;}
+.l5{top:256px;width:96%;background:#5b21b6; color:#fff;}
+.l6{top:320px;width:100%;background:#17141c;color:#fff;}
 
 .section06-disciplines-title{
   color:var(--purple2);
   font-family:"Century Gothic","Avenir Next",Avenir,Arial,sans-serif !important;
   font-size:12px;font-weight:700;letter-spacing:.02em;
 }
-.section06-disciplines{
-  display:grid;
-  grid-template-columns:repeat(6,minmax(0,1fr));
-  border-top:1px solid rgba(25,20,32,.10);
-  border-bottom:1px solid rgba(25,20,32,.10);
-}
 .section06-card{
   min-width:0;padding:15px 14px 14px;
   border-right:1px solid rgba(25,20,32,.10);
 }
-.section06-card:last-child{border-right:0;}
 .section06-card-icon{
   width:34px;height:34px;border-radius:50%;
   display:flex;align-items:center;justify-content:center;
@@ -3497,20 +2491,20 @@ button, input, textarea, select {
   font-family:Georgia,"Times New Roman",serif !important;
   font-size:clamp(14px,1.2vw,18px);
 }
-.section06-quote-mark{color:var(--purple2);font-size:45px;line-height:.5;}
-.section06-footer strong{color:var(--purple2);}
+.section06-quote-mark{color:var(--purple2);font-size:45px;line-height:.5;}/* Tablet */
 
-/* Tablet */
+
+
 @media (max-width:1100px){
   .section06-main{grid-template-columns:1fr;gap:10px;}
   .section06-copy{max-width:760px;}
-  .section06-rock-stage{min-height:500px;max-width:850px;justify-self:center;}
+  .section06-ghost{display:none;}
+  .section06-layers{max-width:560px;justify-self:center;height:390px;}
   .section06-disciplines{grid-template-columns:repeat(3,1fr);}
   .section06-card:nth-child(3){border-right:0;}
-  .section06-card:nth-child(n+4){border-top:1px solid rgba(25,20,32,.10);}
-}
+  .section06-card:nth-child(n+4){border-top:1px solid rgba(25,20,32,.10);}}/* Mobile: reflow instead of shrinking desktop composition. */
 
-/* Mobile: reflow instead of shrinking desktop composition. */
+
 @media (max-width:600px){
   .section-06{
     height:auto !important;
@@ -3535,33 +2529,31 @@ button, input, textarea, select {
   .section06-title{font-size:clamp(35px,10.5vw,48px) !important;}
   .section06-lead{font-size:13px;}
   .section06-callout{margin-top:17px;}
-  .section06-rock-stage{
-    min-height:0;
-    padding:10px 0 8px;
+  .section06-layers{
+    position:static;
+    height:auto;
+    max-width:420px;
+    width:100%;
     display:flex;
     flex-direction:column;
-    align-items:center;
+    gap:8px;
+    margin:0 auto;
   }
-  .section06-rocks{
+  .layer{
     position:static;
-    transform:none;
-    width:min(78%,330px);
-    order:1;
+    width:100% !important;
+    height:auto;
+    flex-wrap:wrap;
+    padding:11px 14px;
+    row-gap:3px;
   }
-  .section06-step{
-    position:static;
-    width:100%;
-    max-width:420px;
-    text-align:left !important;
-    padding:10px 4px 10px 13px;
-    border-top:1px solid rgba(124,58,237,.15);
-    gap:3px;
+  .layer-desc{
+    flex-basis:100%;
+    white-space:normal;
+    font-size:10px;
   }
-  .section06-step:after{display:none;}
-  .step-1{order:2}.step-2{order:3}.step-3{order:4}
-  .step-4{order:5}.step-5{order:6}.step-6{order:7}
-  .section06-step b{font-size:11px;}
-  .section06-step span{font-size:10.5px;}
+  .layer-n{font-size:13px;}
+  .layer b{font-size:11px;}
   .section06-disciplines-title{margin-top:4px;}
   .section06-disciplines{grid-template-columns:1fr;}
   .section06-card{
@@ -3576,20 +2568,10 @@ button, input, textarea, select {
   .section06-card-icon{grid-row:1 / span 3;margin:0;}
   .section06-card h3{margin:3px 0 4px;}
   .section06-card p{margin-bottom:5px;}
-  .section06-footer{font-size:13px;}
-}
-
-/* =========================================================
+  .section06-footer{font-size:13px;}}/* =========================================================
    V4.0 — GLOBAL SVG ICON SYSTEM
    All site icons use one consistent SVG visual language.
-   ========================================================= */
-.pillar-icon svg,
-.node-icon svg,
-.step-icon svg,
-.section06-card-icon svg,
-.impact-mark svg,
-.process-close-mark svg,
-.section06-callout-icon svg {
+   ========================================================= */.pillar-icon svg, .node-icon svg, .section06-card-icon svg, .impact-mark svg, .section06-callout-icon svg{
   display:block;
   width:20px;
   height:20px;
@@ -3599,32 +2581,17 @@ button, input, textarea, select {
   stroke-linecap:round;
   stroke-linejoin:round;
   vector-effect:non-scaling-stroke;
-}
-.pillar-icon,
-.node-icon,
-.step-icon,
-.section06-card-icon,
-.impact-mark,
-.process-close-mark,
-.section06-callout-icon {
+}.pillar-icon, .node-icon, .section06-card-icon, .impact-mark, .section06-callout-icon{
   color:var(--purple2) !important;
 }
-@media (max-width:600px) {
-  .pillar-icon svg,
-  .node-icon svg,
-  .step-icon svg,
-  .section06-card-icon svg,
-  .impact-mark svg,
-  .process-close-mark svg,
-  .section06-callout-icon svg {
+@media (max-width:600px) {.pillar-icon svg, .node-icon svg, .section06-card-icon svg, .impact-mark svg, .section06-callout-icon svg{
     width:19px;
     height:19px;
-  }
-}
-
-/* Nav-control icons (rail arrows, progress arrows, language caret):
+  }}/* Nav-control icons (rail arrows, progress arrows, language caret):
    previously plain unicode glyphs (←, →, ⌄) with inconsistent font
    fallback across iOS/Android; now share the same SVG line-icon style. */
+
+
 .rail-btn svg,
 .pbtn svg {
   display:block;
