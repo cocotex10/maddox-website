@@ -41,14 +41,15 @@ button{cursor:pointer}
   background-position:92% 38%;
   background-repeat:no-repeat;
   background-color:var(--dark);
-  overflow:hidden;position:relative;
+  overflow-y:auto;overflow-x:hidden;position:relative;
 }
 .hero-fullbleed{
-  display:block;height:100%;background:none;position:relative;z-index:1;
+  display:block;min-height:100%;background:none;position:relative;z-index:1;
 }
 .hero-fullbleed .hero-copy{
-  height:100%;padding:150px 60px 120px 78px;
+  min-height:100%;padding:100px 60px 50px 78px;
   display:flex;flex-direction:column;justify-content:flex-end;
+  box-sizing:border-box;
 }
 #p1 .kicker{color:#c9b8f0;}
 #p1 h1{color:#fff;}
@@ -128,7 +129,6 @@ h1 span,h2 span{color:var(--purple)}
   grid-template-columns:repeat(3,minmax(0,1fr));
   border:1px solid rgba(25,20,32,.10);
   border-radius:0 32px 0 32px;
-  overflow:hidden;
 }
 .industry-card{
   min-width:0;padding:22px 20px 20px;
@@ -295,6 +295,7 @@ h1 span,h2 span{color:var(--purple)}
   .topbar{padding:0 18px}
   .hero{grid-template-columns:1fr}
   .hero-copy{padding:110px 28px 150px;z-index:2;background:linear-gradient(90deg,rgba(255,255,255,.97),rgba(255,255,255,.72))}
+  .hero-fullbleed .hero-copy{background:none;}
   .hero-photo{position:absolute;inset:0;opacity:.48;display:flex;align-items:center;justify-content:center}
   .hero-copy h1{font-size:54px}
   .panel-inner{padding:95px 30px 95px}
