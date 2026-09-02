@@ -54,32 +54,32 @@
 </aside>
 
 <main class="viewport"><div class="mobile-logo" aria-hidden="true"><img id="mobileLogo" src="assets/logo/maddox-logo-dark.png" alt="Maddox"></div>
+  <button id="backHomeBtn" class="back-home-btn" aria-label="Volver al inicio" title="Volver al inicio" onclick="go(0)">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10v10h5v-6h2v6h5V10"/></svg>
+  </button>
   <div class="mobile-brand" aria-label="Maddox">
     <img src="assets/logo/maddox-logo-white.png" alt="Maddox">
   </div>
   <div class="track" id="track">
 
-    <section class="panel" id="p1">
+    <section class="panel dark" id="p1">
       <div class="topbar">
-        <nav class="toplinks"><a href="#p3">Soluciones</a><a href="#p4">Expertise</a><a href="#p7">Industrias</a><a href="#p8">Nosotros</a><a href="#p8">Carreras</a></nav>
+        <nav class="toplinks"><a href="#p3">Soluciones</a><a href="#p4">Expertise</a><a href="#p6">Industrias</a><a href="nosotros.html">Nosotros</a><a href="#p7">Carreras</a></nav>
         <div style="display:flex;align-items:center;gap:18px"><span class="lang">ES<svg class="lang-caret" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span><button class="cta" onclick="go(6)">Hablemos →</button></div>
       </div>
-      <div class="hero">
+      
+      <div class="hero hero-fullbleed">
         <div class="hero-copy">
           <div class="kicker">SERVICIOS Y SOLUCIONES TECNOLÓGICAS</div>
           <h1>Technology that moves <span>business forward.</span></h1>
           <p class="lead">Ayudamos a organizaciones a resolver desafíos tecnológicos, modernizar operaciones y acelerar iniciativas de innovación mediante soluciones, ingeniería y talento especializado.</p>
           <div class="actions"><button class="btn-dark" onclick="go(2)">Explorar soluciones →</button><button class="btn-outline" onclick="go(6)">Hablemos</button></div>
-          
-        </div>
-        <div class="hero-photo">
-          <img src="https://images.openai.com/static-rsc-4/mfnh5TUgICzCEQuPRK23ZmbUJBZaVaEX9OfGPBRUqkt8n-w9BaIHsJk1-kfjTZIA8XHvNs4K9cKB1OHFOgRHzJbB-nQbQQY-0iA2RCoJHCZI7OtOP2VUowd7QS-1NITP8SZAXMxVbQasaAxIVgTyz-uYn9BUlya8w4g5-9mG0sEY8sPE0D9Z7kg9hWwKk_uZ?purpose=fullsize" alt="Equipo de tecnología trabajando">
           <div class="photo-card"><small>Nuestro propósito</small><strong>Apply technology with impact.<br>Build what matters.</strong></div>
         </div>
       </div>
     </section>
 
-    <section class="panel dark challenge-panel" id="p2">
+    <section class="panel challenge-panel" id="p2">
       <div class="challenge-wave" aria-hidden="true"></div>
       <div class="panel-inner challenge-inner">
         <div class="challenge-header">
@@ -143,7 +143,7 @@
       </div>
     </section>
 
-    <section class="panel solutions-panel" id="p3">
+    <section class="panel dark solutions-panel" id="p3">
       <div class="solutions-inner">
         <div class="solutions-copy">
           <div class="solutions-label"><span>03</span> NUESTRAS SOLUCIONES</div>
@@ -157,7 +157,7 @@
           <div class="solutions-orbit orbit-two"></div>
 
           <div class="solutions-center">
-            <img src="assets/logo/maddox-logo.png" alt="Maddox">
+            <img src="assets/logo/maddox-logo-white.png" alt="Maddox">
             <span>Technology<br>Solutions</span>
           </div>
 
@@ -235,6 +235,8 @@
 
     <div class="section06-main">
       <div class="section06-ghost" aria-hidden="true">04</div>
+      <div class="section06-orbit orbit-x1" aria-hidden="true"></div>
+      <div class="section06-orbit orbit-x2" aria-hidden="true"></div>
       <div class="section06-copy">
         <h2 class="section06-title">
           No hay una única forma<br class="desktop-only">
@@ -304,7 +306,7 @@
   </div>
 </section>
 
-    <section class="panel talent-panel" id="p5">
+    <section class="panel dark talent-panel" id="p5">
   <div class="talent-inner">
     <div class="talent-copy">
       <div class="talent-label"><span>05</span> TALENTO &amp; NEARSHORE</div>
@@ -350,22 +352,128 @@
 </section>
 
     <section class="panel soft" id="p6">
-      <div class="panel-inner">
-        <div class="kicker">Industries we serve</div>
-        <h2 class="section-title">Technology where it <span>matters most.</span></h2>
-        <div class="industry-grid">
-          <article class="industry"><strong>Financial Services</strong><p>Modernizamos plataformas, mejoramos cumplimiento y usamos datos para tomar mejores decisiones.</p></article>
-          <article class="industry"><strong>Insurance</strong><p>Aceleramos iniciativas digitales, optimizamos reclamos y mejoramos la experiencia.</p></article>
-          <article class="industry"><strong>Government</strong><p>Entregamos servicios seguros, escalables y centrados en el ciudadano con tecnología moderna.</p></article>
-          <article class="industry"><strong>Retail</strong><p>Creamos experiencias digitales y operaciones eficientes basadas en datos.</p></article>
+      <div class="panel-inner industries-inner">
+        <div class="industries-orbit orbit-y1" aria-hidden="true"></div>
+        <div class="industries-orbit orbit-y2" aria-hidden="true"></div>
+        <div class="industries-kicker"><span>06</span> INDUSTRIAS</div>
+        <h2 class="industries-title">Cada industria tiene<br>su propia realidad.<br><span>La tecnología debe entenderla.</span></h2>
+        <div class="industries-rule"></div>
+        <p class="industries-lead">No aplicamos soluciones genéricas a problemas particulares. Entendemos el contexto, las dinámicas y los desafíos de cada industria para construir soluciones que respondan realmente al negocio.</p>
+
+        <div class="industries-grid">
+          <article class="industry-card">
+            <div class="industry-card-top"><div class="industry-card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V12M12 20V4M19 20v-9"/></svg></div><span class="industry-num">01</span></div>
+            <h3>SERVICIOS FINANCIEROS</h3>
+            <p>Impulsamos experiencias financieras digitales seguras en ecosistemas complejos y regulados.</p>
+            <span>Banca · Seguros · Fintech</span>
+          </article>
+          <article class="industry-card">
+            <div class="industry-card-top"><div class="industry-card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 18a2 2 0 100-4 2 2 0 000 4z"/><path d="M8.5 13.5a5 5 0 017 0M5.5 10.5a9 9 0 0113 0"/></svg></div><span class="industry-num">02</span></div>
+            <h3>TELECOMUNICACIONES Y MEDIOS</h3>
+            <p>Conectamos plataformas, clientes y servicios digitales a escala.</p>
+            <span>Conectividad · Servicios digitales · Medios</span>
+          </article>
+          <article class="industry-card">
+            <div class="industry-card-top"><div class="industry-card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg></div><span class="industry-num">03</span></div>
+            <h3>ENERGÍA Y SERVICIOS PÚBLICOS</h3>
+            <p>Modernizamos operaciones críticas e infraestructuras esenciales.</p>
+            <span>Energía · Infraestructura · Utilities</span>
+          </article>
+          <article class="industry-card">
+            <div class="industry-card-top"><div class="industry-card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 016 0v2"/></svg></div><span class="industry-num">04</span></div>
+            <h3>RETAIL Y CONSUMO</h3>
+            <p>Transformamos el comercio y la experiencia del cliente en todos los canales.</p>
+            <span>Comercio · Experiencia del cliente · Canales digitales</span>
+          </article>
+          <article class="industry-card">
+            <div class="industry-card-top"><div class="industry-card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10l9-6 9 6M4 10h16M5 21V10M9 21V10M15 21V10M19 21V10M4 21h16"/></svg></div><span class="industry-num">05</span></div>
+            <h3>GOBIERNO Y SERVICIOS PÚBLICOS</h3>
+            <p>Creamos servicios públicos digitales más simples, accesibles y eficientes.</p>
+            <span>Plataformas públicas · Servicios al ciudadano · Transformación digital</span>
+          </article>
+          <article class="industry-card">
+            <div class="industry-card-top"><div class="industry-card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></div><span class="industry-num">06</span></div>
+            <h3>INDUSTRIA Y SERVICIOS</h3>
+            <p>Conectamos operaciones, cadenas de suministro y capacidades empresariales.</p>
+            <span>Operaciones · Cadena de suministro · Servicios empresariales</span>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="panel contact" id="p7">
-      <div class="contact-box">
-        <div><div class="kicker">Construyamos lo que sigue</div><h2>¿Cuál es tu próximo <span>desafío tecnológico?</span></h2></div>
-        <div><p>Desde modernizar una plataforma hasta implementar IA, automatizar una operación o incorporar el equipo necesario para ejecutar una iniciativa.</p><a class="big-cta" href="mailto:hello@maddox.tech">Hablemos →</a></div>
+    <section class="panel dark" id="p7">
+      <div class="panel-inner contact07-inner">
+        <div class="contact07-grid">
+          <div>
+            <div class="contact07-kicker">07 · HABLEMOS</div>
+            <h1 class="contact07-title">¿Tienes un desafío<br>que merece <em>otra<br>mirada?</em></h1>
+            <div class="contact07-rule"></div>
+            <p class="contact07-lead">Cuéntanos qué estás intentando resolver. Entenderemos el contexto, exploraremos las posibilidades y te diremos cómo podemos aportar.</p>
+
+            <div class="contact07-feature">
+              <div class="contact07-badge"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5"/><circle cx="17.5" cy="9" r="2.2"/><path d="M15.3 20c.3-2.2 1.9-3.8 4.2-4.1"/></svg></div>
+              <div><b>Entendemos el contexto</b><span>Escuchamos antes de proponer.</span></div>
+            </div>
+            <div class="contact07-feature">
+              <div class="contact07-badge"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r=".8" fill="currentColor"/></svg></div>
+              <div><b>Exploramos posibilidades</b><span>Analizamos, cuestionamos y diseñamos.</span></div>
+            </div>
+            <div class="contact07-feature">
+              <div class="contact07-badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17l5-5 4 4 7-8"/><path d="M15 8h5v5"/></svg></div>
+              <div><b>Generamos impacto real</b><span>Tecnología que transforma el negocio.</span></div>
+            </div>
+          </div>
+
+          <div class="contact07-card">
+            <div class="contact07-form-head">
+              <div class="contact07-badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v12H8l-4 4V4z"/></svg></div>
+              <div>
+                <h2>Hablemos de tu desafío</h2>
+                <p>Completa el formulario y nos pondremos en contacto contigo a la brevedad.</p>
+              </div>
+            </div>
+
+            <!-- Formulario visual únicamente: falta conectar a un servicio de envío
+                 (p.ej. Formspree o Web3Forms) antes de activarlo en producción. -->
+            <form onsubmit="return false;">
+              <div class="contact07-field">
+                <label>Nombre <span class="contact07-req">*</span></label>
+                <input type="text" placeholder="Tu nombre" required>
+              </div>
+              <div class="contact07-row2">
+                <div class="contact07-field">
+                  <label>Empresa <span class="contact07-req">*</span></label>
+                  <input type="text" placeholder="Nombre de la empresa" required>
+                </div>
+                <div class="contact07-field">
+                  <label>Correo corporativo <span class="contact07-req">*</span></label>
+                  <input type="email" placeholder="tu@empresa.com" required>
+                </div>
+              </div>
+              <div class="contact07-field">
+                <label>Teléfono / WhatsApp <span class="contact07-opt">(opcional)</span></label>
+                <input type="tel" placeholder="+507 6000 0000">
+              </div>
+              <div class="contact07-field">
+                <label>¿En qué podemos ayudarte? <span class="contact07-req">*</span></label>
+                <select required>
+                  <option value="" selected disabled>Selecciona una opción</option>
+                  <option>Modernizar una plataforma</option>
+                  <option>Implementar IA / Datos</option>
+                  <option>Automatizar una operación</option>
+                  <option>Incorporar talento / Nearshore</option>
+                  <option>Otro</option>
+                </select>
+              </div>
+              <div class="contact07-field">
+                <label>¿Qué quieres resolver? <span class="contact07-req">*</span></label>
+                <textarea placeholder="Cuéntanos brevemente tu desafío, objetivo o idea…" required></textarea>
+              </div>
+              <button type="submit" class="contact07-submit">HABLEMOS <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+              <p class="contact07-fineprint">Tu información está segura con nosotros. No compartimos tus datos.</p>
+            </form>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -416,6 +524,7 @@
 (function () {
   var logo = document.getElementById('mobileLogo');
   var track = document.getElementById('track');
+  var backBtn = document.getElementById('backHomeBtn');
   if (!logo) return;
 
   var whiteLogo = 'assets/logo/maddox-logo-white.png';
@@ -430,21 +539,25 @@
     var panels = track.querySelectorAll('.panel');
     var viewportCenter = window.innerWidth / 2;
     var current = null;
+    var currentIndex = -1;
     var smallest = Infinity;
 
-    panels.forEach(function (panel) {
+    panels.forEach(function (panel, i) {
       var r = panel.getBoundingClientRect();
       var distance = Math.abs(((r.left + r.right) / 2) - viewportCenter);
       if (distance < smallest) {
         smallest = distance;
         current = panel;
+        currentIndex = i;
       }
     });
 
-    if (current && current.classList.contains('dark')) {
-      logo.src = whiteLogo;
-    } else {
-      logo.src = darkLogo;
+    var isDark = !!(current && current.classList.contains('dark'));
+    logo.src = isDark ? whiteLogo : darkLogo;
+
+    if (backBtn) {
+      backBtn.classList.toggle('is-visible', currentIndex > 0);
+      backBtn.classList.toggle('on-dark', isDark);
     }
   }
 
