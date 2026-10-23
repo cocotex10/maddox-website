@@ -222,7 +222,7 @@ nav.main .nav-item.open .mega{display:block}
 .split h2 span{color:var(--purple2)}
 .split .lead-dark{margin-bottom:26px;font-size:15px}
 .tsvc{display:grid;gap:14px;margin-bottom:30px}
-.tsvc div{display:flex;gap:16px;padding:16px 18px;background:#fff;border:1px solid var(--line);border-radius:10px}
+.tsvc div,.tsvc a{display:flex;gap:16px;padding:16px 18px;background:#fff;border:1px solid var(--line);border-radius:10px}
 .tsvc em{font-style:normal;font-size:11px;font-weight:700;color:var(--purple2);padding-top:3px}
 .tsvc b{display:block;font-size:14px;margin-bottom:2px}
 .tsvc span{font-size:12.5px;color:var(--muted);line-height:1.5;display:block}
@@ -487,3 +487,5 @@ footer.site{background:var(--darker);color:#a49dae;padding:60px 0 0;font-size:13
 .model h3{font-family:var(--sans);font-size:17px;font-weight:700;color:#fff;margin-bottom:8px}
 .model p{font-size:14px;line-height:1.6;color:#b9b4c4;margin:0 0 10px}
 @media(max-width:1000px){.know-intro{grid-template-columns:minmax(0,1fr)}}
+
+.tsvc a{color:inherit;text-decoration:none;transition:border-color .2s,box-shadow .2s}.tsvc a:hover{border-color:var(--purple2);box-shadow:0 6px 18px rgba(80,40,160,.12)}.tsvc a:focus-visible{outline:2px solid var(--purple2);outline-offset:2px}
