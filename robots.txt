@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.maddox-global.com/sitemap.xml
