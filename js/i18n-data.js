@@ -61,7 +61,7 @@ window.MADDOX_I18N = {
  "know.c2.p": "Specialized technology talent and nearshore teams that integrate quickly into your initiatives and existing teams.",
  "know.c2.l": "Explore talent &gt;",
  "nav.nosotros": "About us",
- "about.h1": "Technology matters. <span>What we make possible with it, even more.</span>",
+ "about.h1": "Technology is the means. <span>Results are what matter.</span>",
  "know.c3.p": "We turn technology challenges into opportunities for growth, efficiency and innovation, combining specialized knowledge, engineering and flexible delivery models.",
  "know.c3.l": "Get to know Maddox &gt;",
  "talent.s1": "Bring in technology specialists when you need to expand your capacity without permanently growing your structure.",
